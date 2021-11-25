@@ -31,5 +31,12 @@ namespace projectPrototypeTwo
         {
 
         }
+
+        private void btn_continue_Click(object sender, EventArgs e)
+        {
+            mainMenu mm = new mainMenu();
+            mm.Show();
+            this.Hide();
+        }
     }
 }

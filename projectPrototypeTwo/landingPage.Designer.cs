@@ -159,6 +159,7 @@ namespace projectPrototypeTwo
             this.btn_continue.TabIndex = 5;
             this.btn_continue.Text = "Click heare to Continue   >>";
             this.btn_continue.UseTransparentBackground = true;
+            this.btn_continue.Click += new System.EventHandler(this.btn_continue_Click);
             // 
             // guna2HtmlLabel1
             // 

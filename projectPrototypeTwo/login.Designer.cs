@@ -80,7 +80,7 @@ namespace projectPrototypeTwo
             this.btn_privacyPolicy.ForeColor = System.Drawing.Color.DimGray;
             this.btn_privacyPolicy.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.btn_privacyPolicy.HoverState.Parent = this.btn_privacyPolicy;
-            this.btn_privacyPolicy.Location = new System.Drawing.Point(80, 367);
+            this.btn_privacyPolicy.Location = new System.Drawing.Point(82, 367);
             this.btn_privacyPolicy.Name = "btn_privacyPolicy";
             this.btn_privacyPolicy.ShadowDecoration.Parent = this.btn_privacyPolicy;
             this.btn_privacyPolicy.Size = new System.Drawing.Size(150, 29);
@@ -108,7 +108,7 @@ namespace projectPrototypeTwo
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.label1.Location = new System.Drawing.Point(146, 242);
+            this.label1.Location = new System.Drawing.Point(146, 248);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(21, 17);
@@ -124,7 +124,7 @@ namespace projectPrototypeTwo
             // 
             // guna2Separator1
             // 
-            this.guna2Separator1.Location = new System.Drawing.Point(41, 248);
+            this.guna2Separator1.Location = new System.Drawing.Point(41, 254);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(88, 8);
             this.guna2Separator1.TabIndex = 2;
@@ -147,7 +147,7 @@ namespace projectPrototypeTwo
             this.btn_register.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_register.ForeColor = System.Drawing.Color.Black;
             this.btn_register.HoverState.Parent = this.btn_register;
-            this.btn_register.Location = new System.Drawing.Point(34, 270);
+            this.btn_register.Location = new System.Drawing.Point(34, 276);
             this.btn_register.Name = "btn_register";
             this.btn_register.ShadowDecoration.Parent = this.btn_register;
             this.btn_register.Size = new System.Drawing.Size(240, 29);
@@ -173,7 +173,7 @@ namespace projectPrototypeTwo
             this.btn_login.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_login.ForeColor = System.Drawing.Color.White;
             this.btn_login.HoverState.Parent = this.btn_login;
-            this.btn_login.Location = new System.Drawing.Point(34, 203);
+            this.btn_login.Location = new System.Drawing.Point(34, 209);
             this.btn_login.Name = "btn_login";
             this.btn_login.ShadowDecoration.Parent = this.btn_login;
             this.btn_login.Size = new System.Drawing.Size(240, 29);
@@ -199,7 +199,7 @@ namespace projectPrototypeTwo
             this.txt_password.HoverState.Parent = this.txt_password;
             this.txt_password.IconRight = ((System.Drawing.Image)(resources.GetObject("txt_password.IconRight")));
             this.txt_password.IconRightOffset = new System.Drawing.Point(20, 0);
-            this.txt_password.Location = new System.Drawing.Point(33, 128);
+            this.txt_password.Location = new System.Drawing.Point(33, 134);
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '\0';
             this.txt_password.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -229,7 +229,7 @@ namespace projectPrototypeTwo
             this.txt_username.HoverState.Parent = this.txt_username;
             this.txt_username.IconRight = ((System.Drawing.Image)(resources.GetObject("txt_username.IconRight")));
             this.txt_username.IconRightOffset = new System.Drawing.Point(20, 0);
-            this.txt_username.Location = new System.Drawing.Point(33, 77);
+            this.txt_username.Location = new System.Drawing.Point(33, 83);
             this.txt_username.Name = "txt_username";
             this.txt_username.PasswordChar = '\0';
             this.txt_username.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));

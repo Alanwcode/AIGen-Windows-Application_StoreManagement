@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cOrders.Designer.cs">
+      <DependentUpon>cOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="cOrders.resx">
+      <DependentUpon>cOrders.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="landingPage.resx">
       <DependentUpon>landingPage.cs</DependentUpon>
     </EmbeddedResource>

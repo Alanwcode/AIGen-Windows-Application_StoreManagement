@@ -29,6 +29,7 @@ namespace projectPrototypeTwo
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(types));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -53,6 +54,7 @@ namespace projectPrototypeTwo
             this.btn_contactUs = new Guna.UI2.WinForms.Guna2Button();
             this.btn_home = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -333,15 +335,15 @@ namespace projectPrototypeTwo
             this.btn_privacyPolicy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_privacyPolicy.DisabledState.Parent = this.btn_privacyPolicy;
             this.btn_privacyPolicy.FillColor = System.Drawing.Color.Transparent;
-            this.btn_privacyPolicy.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_privacyPolicy.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.btn_privacyPolicy.ForeColor = System.Drawing.Color.Black;
             this.btn_privacyPolicy.HoverState.Parent = this.btn_privacyPolicy;
-            this.btn_privacyPolicy.Location = new System.Drawing.Point(445, 1);
+            this.btn_privacyPolicy.Location = new System.Drawing.Point(445, 4);
             this.btn_privacyPolicy.Name = "btn_privacyPolicy";
             this.btn_privacyPolicy.ShadowDecoration.Parent = this.btn_privacyPolicy;
-            this.btn_privacyPolicy.Size = new System.Drawing.Size(121, 29);
+            this.btn_privacyPolicy.Size = new System.Drawing.Size(154, 29);
             this.btn_privacyPolicy.TabIndex = 13;
-            this.btn_privacyPolicy.Text = "PRIVACY POLICY";
+            this.btn_privacyPolicy.Text = "Terms and Conditions";
             this.btn_privacyPolicy.UseTransparentBackground = true;
             // 
             // btn_contactUs
@@ -357,15 +359,15 @@ namespace projectPrototypeTwo
             this.btn_contactUs.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_contactUs.DisabledState.Parent = this.btn_contactUs;
             this.btn_contactUs.FillColor = System.Drawing.Color.Transparent;
-            this.btn_contactUs.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_contactUs.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.btn_contactUs.ForeColor = System.Drawing.Color.Black;
             this.btn_contactUs.HoverState.Parent = this.btn_contactUs;
-            this.btn_contactUs.Location = new System.Drawing.Point(342, 1);
+            this.btn_contactUs.Location = new System.Drawing.Point(342, 4);
             this.btn_contactUs.Name = "btn_contactUs";
             this.btn_contactUs.ShadowDecoration.Parent = this.btn_contactUs;
             this.btn_contactUs.Size = new System.Drawing.Size(101, 29);
             this.btn_contactUs.TabIndex = 14;
-            this.btn_contactUs.Text = "CONTACT US";
+            this.btn_contactUs.Text = "Contact Us";
             this.btn_contactUs.UseTransparentBackground = true;
             // 
             // btn_home
@@ -381,15 +383,15 @@ namespace projectPrototypeTwo
             this.btn_home.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_home.DisabledState.Parent = this.btn_home;
             this.btn_home.FillColor = System.Drawing.Color.Transparent;
-            this.btn_home.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_home.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.btn_home.ForeColor = System.Drawing.Color.Black;
             this.btn_home.HoverState.Parent = this.btn_home;
-            this.btn_home.Location = new System.Drawing.Point(268, 1);
+            this.btn_home.Location = new System.Drawing.Point(268, 4);
             this.btn_home.Name = "btn_home";
             this.btn_home.ShadowDecoration.Parent = this.btn_home;
             this.btn_home.Size = new System.Drawing.Size(73, 29);
             this.btn_home.TabIndex = 15;
-            this.btn_home.Text = "HOME";
+            this.btn_home.Text = "Home";
             this.btn_home.UseTransparentBackground = true;
             this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
@@ -417,6 +419,12 @@ namespace projectPrototypeTwo
             this.guna2Button1.Text = "<--  Back";
             this.guna2Button1.UseTransparentBackground = true;
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.guna2Panel1;
+            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // types
             // 
@@ -481,5 +489,6 @@ namespace projectPrototypeTwo
         private Guna.UI2.WinForms.Guna2Button btn_contactUs;
         private Guna.UI2.WinForms.Guna2Button btn_home;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

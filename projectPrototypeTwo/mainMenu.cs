@@ -19,7 +19,8 @@ namespace projectPrototypeTwo
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-
+            login log = new login();
+            log.ShowDialog();
         }
 
         private void btn_customOrder_Click(object sender, EventArgs e)
@@ -34,6 +35,12 @@ namespace projectPrototypeTwo
             types tEI = new types();
             tEI.Show();
             this.Hide();
+        }
+
+        private void btn_privacyPolicy_Click(object sender, EventArgs e)
+        {
+            termsAndconditions tac = new termsAndconditions();
+            tac.ShowDialog();
         }
     }
 }

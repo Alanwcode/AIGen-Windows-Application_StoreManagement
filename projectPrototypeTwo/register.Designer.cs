@@ -567,6 +567,7 @@ namespace projectPrototypeTwo
             this.Controls.Add(this.txt_NIC);
             this.Controls.Add(this.txt_name);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "register";
             this.Text = "register";
             this.Load += new System.EventHandler(this.register_Load);

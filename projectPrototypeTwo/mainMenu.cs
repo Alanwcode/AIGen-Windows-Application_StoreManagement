@@ -21,6 +21,7 @@ namespace projectPrototypeTwo
         {
             login log = new login();
             log.ShowDialog();
+            this.Close();
         }
 
         private void btn_customOrder_Click(object sender, EventArgs e)

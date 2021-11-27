@@ -104,6 +104,7 @@ namespace projectPrototypeTwo
             this.Controls.Add(this.lbl_errorMessage);
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "messageBox";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();

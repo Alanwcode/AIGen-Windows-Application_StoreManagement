@@ -49,11 +49,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="adminDashboard.cs">
+    <Compile Include="adminDashboardHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="adminDashboard.Designer.cs">
-      <DependentUpon>adminDashboard.cs</DependentUpon>
+    <Compile Include="adminDashboardHome.Designer.cs">
+      <DependentUpon>adminDashboardHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminDashboardMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminDashboardMembers.Designer.cs">
+      <DependentUpon>adminDashboardMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminDashboardOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminDashboardOrders.Designer.cs">
+      <DependentUpon>adminDashboardOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminDashboardStocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminDashboardStocks.Designer.cs">
+      <DependentUpon>adminDashboardStocks.cs</DependentUpon>
     </Compile>
     <Compile Include="checkout.cs">
       <SubType>Form</SubType>
@@ -105,8 +123,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="adminDashboard.resx">
-      <DependentUpon>adminDashboard.cs</DependentUpon>
+    <EmbeddedResource Include="adminDashboardHome.resx">
+      <DependentUpon>adminDashboardHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminDashboardMembers.resx">
+      <DependentUpon>adminDashboardMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminDashboardOrders.resx">
+      <DependentUpon>adminDashboardOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminDashboardStocks.resx">
+      <DependentUpon>adminDashboardStocks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="checkout.resx">
       <DependentUpon>checkout.cs</DependentUpon>

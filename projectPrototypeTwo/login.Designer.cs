@@ -32,6 +32,7 @@ namespace projectPrototypeTwo
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbl_val_invalid = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_privacyPolicy = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@ namespace projectPrototypeTwo
             this.txt_password = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_username = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.lbl_val_invalid = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,12 +59,23 @@ namespace projectPrototypeTwo
             this.guna2Panel1.Controls.Add(this.btn_login);
             this.guna2Panel1.Controls.Add(this.txt_password);
             this.guna2Panel1.Controls.Add(this.txt_username);
-            this.guna2Panel1.Location = new System.Drawing.Point(1, 0);
+            this.guna2Panel1.Location = new System.Drawing.Point(1, 1);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(315, 409);
             this.guna2Panel1.TabIndex = 1;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // lbl_val_invalid
+            // 
+            this.lbl_val_invalid.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_val_invalid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_val_invalid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_val_invalid.Location = new System.Drawing.Point(43, 57);
+            this.lbl_val_invalid.Name = "lbl_val_invalid";
+            this.lbl_val_invalid.Size = new System.Drawing.Size(227, 15);
+            this.lbl_val_invalid.TabIndex = 8;
+            this.lbl_val_invalid.Text = "Invalid Username or Password, Please try again";
             // 
             // btn_privacyPolicy
             // 
@@ -105,6 +116,7 @@ namespace projectPrototypeTwo
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(44, 39);
             this.guna2ControlBox1.TabIndex = 5;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // label1
             // 
@@ -250,17 +262,6 @@ namespace projectPrototypeTwo
             this.guna2DragControl1.TargetControl = this.guna2Panel1;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
-            // lbl_val_invalid
-            // 
-            this.lbl_val_invalid.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_val_invalid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_val_invalid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_val_invalid.Location = new System.Drawing.Point(43, 57);
-            this.lbl_val_invalid.Name = "lbl_val_invalid";
-            this.lbl_val_invalid.Size = new System.Drawing.Size(227, 15);
-            this.lbl_val_invalid.TabIndex = 8;
-            this.lbl_val_invalid.Text = "Invalid Username or Password, Please try again";
-            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,6 +269,7 @@ namespace projectPrototypeTwo
             this.ClientSize = new System.Drawing.Size(316, 408);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "login";
             this.Text = "login";
             this.Load += new System.EventHandler(this.login_Load);

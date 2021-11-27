@@ -22,7 +22,7 @@ namespace projectPrototypeTwo
         private void btn_register_Click(object sender, EventArgs e)
         {
             register reg = new register();
-            this.Hide();
+            this.Close();
             reg.ShowDialog();
         }
 
@@ -37,7 +37,7 @@ namespace projectPrototypeTwo
             lbl_val_invalid.Visible = false;
             if (txt_username.Text == "admin" && txt_password.Text == "admin123")
             {
-                adminDashboard adD = new adminDashboard();
+                adminDashboardHome adD = new adminDashboardHome();
                 adD.Show();
                 this.Close();
             }
@@ -55,6 +55,13 @@ namespace projectPrototypeTwo
         private void login_Load(object sender, EventArgs e)
         {
             lbl_val_invalid.Visible = false;
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            mainMenu mm = new mainMenu();
+            mm.Show();
         }
     }
 }

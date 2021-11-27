@@ -544,6 +544,7 @@ namespace projectPrototypeTwo
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "types";
             this.Text = "Form1";
             this.guna2Panel1.ResumeLayout(false);

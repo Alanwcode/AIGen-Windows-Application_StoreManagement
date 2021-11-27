@@ -58,5 +58,102 @@ namespace projectPrototypeTwo
             txt_username.Clear();
             cbx_agree.Checked = false;
         }
+
+        private void btn_submit_Click(object sender, EventArgs e)
+        {
+            int count = 0;
+            if (string.IsNullOrEmpty(txt_name.Text))
+            {
+                lbl_valName.Text = "Feild can't be null";
+                lbl_valName.Visible = true;
+            }
+            else
+            {
+                count = count + 1;
+            }
+
+            if (string.IsNullOrEmpty(txt_NIC.Text))
+            {
+                lbl_valNIC.Text = "Feild can't be null";
+                lbl_valNIC.Visible = true;
+            }
+            else
+            {
+                count = count + 1;
+            }
+
+            if (string.IsNullOrEmpty(txt_email.Text))
+            {
+                lbl_valEmail.Text = "Feild can't be null";
+                lbl_valEmail.Visible = true;
+            }
+            else
+            {
+                count = count + 1;
+            }
+
+            if (string.IsNullOrEmpty(txt_telephone.Text))
+            {
+                lbl_valTelephone.Text = "Feild can't be null";
+                lbl_valTelephone.Visible = true;
+            }
+            else
+            {
+                count = count + 1;
+            }
+
+            if (string.IsNullOrEmpty(txt_address.Text))
+            {
+                lbl_valAddress.Text = "Feild can't be null";
+                lbl_valAddress.Visible = true;
+            }
+            else
+            {
+                count = count + 1;
+            }
+
+            if (string.IsNullOrEmpty(txt_username.Text))
+            {
+                lbl_valUsername.Text = "Feild can't be null";
+                lbl_valUsername.Visible = true;
+            }
+            else
+            {
+                count = count + 1;
+            }
+
+            if (string.IsNullOrEmpty(txt_password.Text))
+            {
+                lbl_valPassword.Text = "Feild can't be null";
+                lbl_valPassword.Visible = true;
+            }
+            else
+            {
+                count = count + 1;
+            }
+
+            if (string.IsNullOrEmpty(txt_confirmPassword.Text))
+            {
+                lbl_valConfirmPassword.Text = "Feild can't be null";
+                lbl_valConfirmPassword.Visible = true;
+            }
+            else
+            {
+                count = count + 1;
+            }
+
+            
+
+            if(count == 8)
+            {
+                Sucess suc = new Sucess();
+                suc.ShowDialog();
+            }
+            else
+            {
+                //messageBox mbx = new messageBox();
+                //mbx.ShowDialog();
+            }
+        }
     }
 }

@@ -390,6 +390,7 @@ namespace projectPrototypeTwo
             this.btn_submit.Size = new System.Drawing.Size(136, 26);
             this.btn_submit.TabIndex = 9;
             this.btn_submit.Text = "Register";
+            this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
             // 
             // btn_clear
             // 

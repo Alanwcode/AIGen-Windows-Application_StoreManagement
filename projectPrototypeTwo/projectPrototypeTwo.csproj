@@ -79,6 +79,12 @@
     <Compile Include="checkout.Designer.cs">
       <DependentUpon>checkout.cs</DependentUpon>
     </Compile>
+    <Compile Include="error404F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="error404F.Designer.cs">
+      <DependentUpon>error404F.cs</DependentUpon>
+    </Compile>
     <Compile Include="messageBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,12 @@
     </Compile>
     <Compile Include="register.Designer.cs">
       <DependentUpon>register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sucess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sucess.Designer.cs">
+      <DependentUpon>Sucess.cs</DependentUpon>
     </Compile>
     <Compile Include="termsAndconditions.cs">
       <SubType>Form</SubType>
@@ -138,6 +150,9 @@
     <EmbeddedResource Include="checkout.resx">
       <DependentUpon>checkout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="error404F.resx">
+      <DependentUpon>error404F.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="landingPage.resx">
       <DependentUpon>landingPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +176,9 @@
     </Compile>
     <EmbeddedResource Include="register.resx">
       <DependentUpon>register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sucess.resx">
+      <DependentUpon>Sucess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="termsAndconditions.resx">
       <DependentUpon>termsAndconditions.cs</DependentUpon>

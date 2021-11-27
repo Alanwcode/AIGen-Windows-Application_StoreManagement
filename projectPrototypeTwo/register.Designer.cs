@@ -419,7 +419,7 @@ namespace projectPrototypeTwo
             // guna2DragControl1
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.TargetControl = this.pbx_sitRobot;
+            this.guna2DragControl1.TargetControl = this;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // lbl_valNIC

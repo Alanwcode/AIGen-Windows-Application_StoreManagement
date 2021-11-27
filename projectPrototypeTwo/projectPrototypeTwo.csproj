@@ -49,11 +49,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cOrders.cs">
+    <Compile Include="adminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cOrders.Designer.cs">
-      <DependentUpon>cOrders.cs</DependentUpon>
+    <Compile Include="adminDashboard.Designer.cs">
+      <DependentUpon>adminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="checkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="checkout.Designer.cs">
+      <DependentUpon>checkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="messageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="messageBox.Designer.cs">
+      <DependentUpon>messageBox.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -93,8 +105,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="cOrders.resx">
-      <DependentUpon>cOrders.cs</DependentUpon>
+    <EmbeddedResource Include="adminDashboard.resx">
+      <DependentUpon>adminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="checkout.resx">
+      <DependentUpon>checkout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="landingPage.resx">
       <DependentUpon>landingPage.cs</DependentUpon>
@@ -104,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="mainMenu.resx">
       <DependentUpon>mainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="messageBox.resx">
+      <DependentUpon>messageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

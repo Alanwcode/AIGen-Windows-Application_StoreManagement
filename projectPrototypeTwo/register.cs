@@ -38,6 +38,7 @@ namespace projectPrototypeTwo
         private void btn_clear_Click(object sender, EventArgs e)
         {
             pbx_searchRobotGIF.Visible = false;
+            pbx_sitRobot.Visible = true;
             lbl_valAddress.Visible = false;
             lbl_valAgree.Visible = false;
             lbl_valConfirmPassword.Visible = false;
@@ -61,7 +62,20 @@ namespace projectPrototypeTwo
 
         private void btn_submit_Click(object sender, EventArgs e)
         {
+            pbx_searchRobotGIF.Visible = false;
+            lbl_valAddress.Visible = false;
+            lbl_valAgree.Visible = false;
+            lbl_valConfirmPassword.Visible = false;
+            lbl_valEmail.Visible = false;
+            lbl_valName.Visible = false;
+            lbl_valNIC.Visible = false;
+            lbl_valPassword.Visible = false;
+            lbl_valTelephone.Visible = false;
+            lbl_valUsername.Visible = false;
+            pbx_sitRobot.Visible = true;
+
             int count = 0;
+
             if (string.IsNullOrEmpty(txt_name.Text))
             {
                 lbl_valName.Text = "Feild can't be null";
@@ -151,6 +165,8 @@ namespace projectPrototypeTwo
             }
             else
             {
+                pbx_searchRobotGIF.Visible = true;
+                pbx_sitRobot.Visible = false;
                 //messageBox mbx = new messageBox();
                 //mbx.ShowDialog();
             }

@@ -85,6 +85,7 @@ namespace projectPrototypeTwo
         private void btn_clear_Click(object sender, EventArgs e)
         {
             price = 4899;
+            lbl_totalPrice.Text = price.ToString() + " USD";
         }
 
         private void btn_voiceControl_Click(object sender, EventArgs e)
@@ -150,6 +151,7 @@ namespace projectPrototypeTwo
             pbx_yellow.Visible = false;
             pbx_white.Visible = true;
 
+            price = Dprice + colorPrice + cameraPrice + voiceControl + remoteAccess + integrate;
             lbl_totalPrice.Text = price.ToString() + " USD";
         }
 

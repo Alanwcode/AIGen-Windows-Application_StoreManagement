@@ -37,5 +37,12 @@ namespace projectPrototypeTwo
             adminDashboardMembers adM = new adminDashboardMembers();
             adM.Show();
         }
+
+        private void btn_mainMenu_Click(object sender, EventArgs e)
+        {
+            mainMenu mm = new mainMenu();
+            mm.Show();
+            this.Hide();
+        }
     }
 }

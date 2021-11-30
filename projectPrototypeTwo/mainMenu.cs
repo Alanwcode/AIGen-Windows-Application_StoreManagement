@@ -26,9 +26,8 @@ namespace projectPrototypeTwo
 
         private void btn_customOrder_Click(object sender, EventArgs e)
         {
-            types tCO = new types();
-            tCO.Show();
-            this.Hide();
+            customOrder co = new customOrder();
+            co.ShowDialog();
         }
 
         private void btn_existingOrder_Click(object sender, EventArgs e)

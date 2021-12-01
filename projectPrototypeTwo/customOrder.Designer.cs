@@ -29,6 +29,7 @@ namespace projectPrototypeTwo
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(customOrder));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -39,6 +40,11 @@ namespace projectPrototypeTwo
             this.pbx_red = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pbx_yellow = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_clear = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_intergrate = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_voiceControl = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_applyCamera = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.cmbx_intergration = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmbx_camera = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -57,11 +63,7 @@ namespace projectPrototypeTwo
             this.btn_purchase = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_totalPrice = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btn_applyCamera = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_voiceControl = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_intergrate = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_clear = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_white)).BeginInit();
@@ -86,11 +88,12 @@ namespace projectPrototypeTwo
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(52, 12);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(56, 15);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(72, 15);
             this.guna2HtmlLabel1.TabIndex = 2;
-            this.guna2HtmlLabel1.Text = "Main Menu";
+            this.guna2HtmlLabel1.Text = "Custom Orders";
             // 
             // guna2PictureBox2
             // 
@@ -179,6 +182,11 @@ namespace projectPrototypeTwo
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.AutoRoundedCorners = true;
+            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel2.BorderColor = System.Drawing.Color.Silver;
+            this.guna2Panel2.BorderRadius = 20;
+            this.guna2Panel2.BorderThickness = 2;
             this.guna2Panel2.Controls.Add(this.btn_clear);
             this.guna2Panel2.Controls.Add(this.btn_intergrate);
             this.guna2Panel2.Controls.Add(this.guna2Button1);
@@ -199,11 +207,145 @@ namespace projectPrototypeTwo
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel5);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel4);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel2);
+            this.guna2Panel2.FillColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Panel2.Location = new System.Drawing.Point(316, 69);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(477, 431);
             this.guna2Panel2.TabIndex = 3;
+            // 
+            // btn_clear
+            // 
+            this.btn_clear.Animated = true;
+            this.btn_clear.AutoRoundedCorners = true;
+            this.btn_clear.BackColor = System.Drawing.Color.Transparent;
+            this.btn_clear.BorderRadius = 15;
+            this.btn_clear.CheckedState.Parent = this.btn_clear;
+            this.btn_clear.CustomImages.Parent = this.btn_clear;
+            this.btn_clear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_clear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_clear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_clear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_clear.DisabledState.Parent = this.btn_clear;
+            this.btn_clear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(75)))), ((int)(((byte)(97)))));
+            this.btn_clear.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear.ForeColor = System.Drawing.Color.White;
+            this.btn_clear.HoverState.Parent = this.btn_clear;
+            this.btn_clear.Image = ((System.Drawing.Image)(resources.GetObject("btn_clear.Image")));
+            this.btn_clear.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btn_clear.ImageOffset = new System.Drawing.Point(55, 0);
+            this.btn_clear.Location = new System.Drawing.Point(72, 368);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.ShadowDecoration.Parent = this.btn_clear;
+            this.btn_clear.Size = new System.Drawing.Size(341, 32);
+            this.btn_clear.TabIndex = 10;
+            this.btn_clear.Text = "Clear Selection";
+            this.btn_clear.UseTransparentBackground = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click_1);
+            // 
+            // btn_intergrate
+            // 
+            this.btn_intergrate.Animated = true;
+            this.btn_intergrate.AutoRoundedCorners = true;
+            this.btn_intergrate.BackColor = System.Drawing.Color.Transparent;
+            this.btn_intergrate.BorderRadius = 13;
+            this.btn_intergrate.CheckedState.Parent = this.btn_intergrate;
+            this.btn_intergrate.CustomImages.Parent = this.btn_intergrate;
+            this.btn_intergrate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_intergrate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_intergrate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_intergrate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_intergrate.DisabledState.Parent = this.btn_intergrate;
+            this.btn_intergrate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.btn_intergrate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_intergrate.ForeColor = System.Drawing.Color.White;
+            this.btn_intergrate.HoverState.Parent = this.btn_intergrate;
+            this.btn_intergrate.Location = new System.Drawing.Point(232, 217);
+            this.btn_intergrate.Name = "btn_intergrate";
+            this.btn_intergrate.ShadowDecoration.Parent = this.btn_intergrate;
+            this.btn_intergrate.Size = new System.Drawing.Size(224, 28);
+            this.btn_intergrate.TabIndex = 9;
+            this.btn_intergrate.Text = "Intergrate";
+            this.btn_intergrate.UseTransparentBackground = true;
+            this.btn_intergrate.Click += new System.EventHandler(this.btn_intergrate_Click);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 14;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(38, 270);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(162, 31);
+            this.guna2Button1.TabIndex = 8;
+            this.guna2Button1.Text = "Add for 2500 USD";
+            this.guna2Button1.UseTransparentBackground = true;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // btn_voiceControl
+            // 
+            this.btn_voiceControl.Animated = true;
+            this.btn_voiceControl.AutoRoundedCorners = true;
+            this.btn_voiceControl.BackColor = System.Drawing.Color.Transparent;
+            this.btn_voiceControl.BorderRadius = 15;
+            this.btn_voiceControl.CheckedState.Parent = this.btn_voiceControl;
+            this.btn_voiceControl.CustomImages.Parent = this.btn_voiceControl;
+            this.btn_voiceControl.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_voiceControl.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_voiceControl.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_voiceControl.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_voiceControl.DisabledState.Parent = this.btn_voiceControl;
+            this.btn_voiceControl.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.btn_voiceControl.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_voiceControl.ForeColor = System.Drawing.Color.White;
+            this.btn_voiceControl.HoverState.Parent = this.btn_voiceControl;
+            this.btn_voiceControl.Location = new System.Drawing.Point(38, 179);
+            this.btn_voiceControl.Name = "btn_voiceControl";
+            this.btn_voiceControl.ShadowDecoration.Parent = this.btn_voiceControl;
+            this.btn_voiceControl.Size = new System.Drawing.Size(162, 32);
+            this.btn_voiceControl.TabIndex = 7;
+            this.btn_voiceControl.Text = "Add for 1200 USD";
+            this.btn_voiceControl.UseTransparentBackground = true;
+            this.btn_voiceControl.Click += new System.EventHandler(this.btn_voiceControl_Click);
+            // 
+            // btn_applyCamera
+            // 
+            this.btn_applyCamera.Animated = true;
+            this.btn_applyCamera.AutoRoundedCorners = true;
+            this.btn_applyCamera.BackColor = System.Drawing.Color.Transparent;
+            this.btn_applyCamera.BorderRadius = 13;
+            this.btn_applyCamera.CheckedState.Parent = this.btn_applyCamera;
+            this.btn_applyCamera.CustomImages.Parent = this.btn_applyCamera;
+            this.btn_applyCamera.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_applyCamera.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_applyCamera.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_applyCamera.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_applyCamera.DisabledState.Parent = this.btn_applyCamera;
+            this.btn_applyCamera.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.btn_applyCamera.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_applyCamera.ForeColor = System.Drawing.Color.White;
+            this.btn_applyCamera.HoverState.Parent = this.btn_applyCamera;
+            this.btn_applyCamera.Location = new System.Drawing.Point(232, 93);
+            this.btn_applyCamera.Name = "btn_applyCamera";
+            this.btn_applyCamera.ShadowDecoration.Parent = this.btn_applyCamera;
+            this.btn_applyCamera.Size = new System.Drawing.Size(224, 29);
+            this.btn_applyCamera.TabIndex = 6;
+            this.btn_applyCamera.Text = "Apply Camera";
+            this.btn_applyCamera.UseTransparentBackground = true;
+            this.btn_applyCamera.Click += new System.EventHandler(this.btn_applyCamera_Click);
             // 
             // guna2Separator1
             // 
@@ -473,7 +615,7 @@ namespace projectPrototypeTwo
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(37, 406);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(84, 406);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(53, 22);
             this.guna2HtmlLabel9.TabIndex = 5;
@@ -485,151 +627,26 @@ namespace projectPrototypeTwo
             this.lbl_totalPrice.BackColor = System.Drawing.Color.Transparent;
             this.lbl_totalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_totalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_totalPrice.Location = new System.Drawing.Point(96, 407);
+            this.lbl_totalPrice.Location = new System.Drawing.Point(143, 407);
             this.lbl_totalPrice.Name = "lbl_totalPrice";
             this.lbl_totalPrice.Size = new System.Drawing.Size(86, 22);
             this.lbl_totalPrice.TabIndex = 5;
             this.lbl_totalPrice.Text = "4899 USD";
             // 
-            // btn_applyCamera
+            // guna2DragControl1
             // 
-            this.btn_applyCamera.Animated = true;
-            this.btn_applyCamera.AutoRoundedCorners = true;
-            this.btn_applyCamera.BackColor = System.Drawing.Color.Transparent;
-            this.btn_applyCamera.BorderRadius = 13;
-            this.btn_applyCamera.CheckedState.Parent = this.btn_applyCamera;
-            this.btn_applyCamera.CustomImages.Parent = this.btn_applyCamera;
-            this.btn_applyCamera.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_applyCamera.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_applyCamera.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_applyCamera.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_applyCamera.DisabledState.Parent = this.btn_applyCamera;
-            this.btn_applyCamera.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.btn_applyCamera.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_applyCamera.ForeColor = System.Drawing.Color.White;
-            this.btn_applyCamera.HoverState.Parent = this.btn_applyCamera;
-            this.btn_applyCamera.Location = new System.Drawing.Point(232, 93);
-            this.btn_applyCamera.Name = "btn_applyCamera";
-            this.btn_applyCamera.ShadowDecoration.Parent = this.btn_applyCamera;
-            this.btn_applyCamera.Size = new System.Drawing.Size(224, 29);
-            this.btn_applyCamera.TabIndex = 6;
-            this.btn_applyCamera.Text = "Apply Camera";
-            this.btn_applyCamera.UseTransparentBackground = true;
-            this.btn_applyCamera.Click += new System.EventHandler(this.btn_applyCamera_Click);
-            // 
-            // btn_voiceControl
-            // 
-            this.btn_voiceControl.Animated = true;
-            this.btn_voiceControl.AutoRoundedCorners = true;
-            this.btn_voiceControl.BackColor = System.Drawing.Color.Transparent;
-            this.btn_voiceControl.BorderRadius = 15;
-            this.btn_voiceControl.CheckedState.Parent = this.btn_voiceControl;
-            this.btn_voiceControl.CustomImages.Parent = this.btn_voiceControl;
-            this.btn_voiceControl.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_voiceControl.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_voiceControl.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_voiceControl.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_voiceControl.DisabledState.Parent = this.btn_voiceControl;
-            this.btn_voiceControl.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.btn_voiceControl.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_voiceControl.ForeColor = System.Drawing.Color.White;
-            this.btn_voiceControl.HoverState.Parent = this.btn_voiceControl;
-            this.btn_voiceControl.Location = new System.Drawing.Point(38, 179);
-            this.btn_voiceControl.Name = "btn_voiceControl";
-            this.btn_voiceControl.ShadowDecoration.Parent = this.btn_voiceControl;
-            this.btn_voiceControl.Size = new System.Drawing.Size(162, 32);
-            this.btn_voiceControl.TabIndex = 7;
-            this.btn_voiceControl.Text = "Add for 1200 USD";
-            this.btn_voiceControl.UseTransparentBackground = true;
-            this.btn_voiceControl.Click += new System.EventHandler(this.btn_voiceControl_Click);
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 14;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(38, 270);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(162, 31);
-            this.guna2Button1.TabIndex = 8;
-            this.guna2Button1.Text = "Add for 2500 USD";
-            this.guna2Button1.UseTransparentBackground = true;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // btn_intergrate
-            // 
-            this.btn_intergrate.Animated = true;
-            this.btn_intergrate.AutoRoundedCorners = true;
-            this.btn_intergrate.BackColor = System.Drawing.Color.Transparent;
-            this.btn_intergrate.BorderRadius = 13;
-            this.btn_intergrate.CheckedState.Parent = this.btn_intergrate;
-            this.btn_intergrate.CustomImages.Parent = this.btn_intergrate;
-            this.btn_intergrate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_intergrate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_intergrate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_intergrate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_intergrate.DisabledState.Parent = this.btn_intergrate;
-            this.btn_intergrate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.btn_intergrate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_intergrate.ForeColor = System.Drawing.Color.White;
-            this.btn_intergrate.HoverState.Parent = this.btn_intergrate;
-            this.btn_intergrate.Location = new System.Drawing.Point(232, 217);
-            this.btn_intergrate.Name = "btn_intergrate";
-            this.btn_intergrate.ShadowDecoration.Parent = this.btn_intergrate;
-            this.btn_intergrate.Size = new System.Drawing.Size(224, 28);
-            this.btn_intergrate.TabIndex = 9;
-            this.btn_intergrate.Text = "Intergrate";
-            this.btn_intergrate.UseTransparentBackground = true;
-            this.btn_intergrate.Click += new System.EventHandler(this.btn_intergrate_Click);
-            // 
-            // btn_clear
-            // 
-            this.btn_clear.Animated = true;
-            this.btn_clear.AutoRoundedCorners = true;
-            this.btn_clear.BackColor = System.Drawing.Color.Transparent;
-            this.btn_clear.BorderRadius = 15;
-            this.btn_clear.CheckedState.Parent = this.btn_clear;
-            this.btn_clear.CustomImages.Parent = this.btn_clear;
-            this.btn_clear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_clear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_clear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_clear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_clear.DisabledState.Parent = this.btn_clear;
-            this.btn_clear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(75)))), ((int)(((byte)(97)))));
-            this.btn_clear.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_clear.ForeColor = System.Drawing.Color.White;
-            this.btn_clear.HoverState.Parent = this.btn_clear;
-            this.btn_clear.Image = ((System.Drawing.Image)(resources.GetObject("btn_clear.Image")));
-            this.btn_clear.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btn_clear.ImageOffset = new System.Drawing.Point(55, 0);
-            this.btn_clear.Location = new System.Drawing.Point(72, 368);
-            this.btn_clear.Name = "btn_clear";
-            this.btn_clear.ShadowDecoration.Parent = this.btn_clear;
-            this.btn_clear.Size = new System.Drawing.Size(341, 32);
-            this.btn_clear.TabIndex = 10;
-            this.btn_clear.Text = "Clear Selection";
-            this.btn_clear.UseTransparentBackground = true;
-            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click_1);
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.guna2Panel1;
+            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // customOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(845, 512);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(845, 551);
             this.Controls.Add(this.lbl_totalPrice);
             this.Controls.Add(this.guna2HtmlLabel9);
             this.Controls.Add(this.btn_purchase);
@@ -639,7 +656,9 @@ namespace projectPrototypeTwo
             this.Controls.Add(this.pbx_blue);
             this.Controls.Add(this.pbx_white);
             this.Controls.Add(this.guna2Panel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "customOrder";
             this.Text = "customOrder";
             this.Load += new System.EventHandler(this.customOrder_Load);
@@ -691,5 +710,6 @@ namespace projectPrototypeTwo
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button btn_intergrate;
         private Guna.UI2.WinForms.Guna2Button btn_clear;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

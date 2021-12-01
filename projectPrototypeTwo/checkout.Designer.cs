@@ -44,6 +44,7 @@ namespace projectPrototypeTwo
             this.txt_expDate = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_cvv = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_payNow = new Guna.UI2.WinForms.Guna2Button();
+            this.lbl_formValidation = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -342,6 +343,18 @@ namespace projectPrototypeTwo
             this.btn_payNow.Size = new System.Drawing.Size(270, 34);
             this.btn_payNow.TabIndex = 8;
             this.btn_payNow.Text = "Pay Now";
+            this.btn_payNow.Click += new System.EventHandler(this.btn_payNow_Click);
+            // 
+            // lbl_formValidation
+            // 
+            this.lbl_formValidation.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_formValidation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_formValidation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_formValidation.Location = new System.Drawing.Point(69, 428);
+            this.lbl_formValidation.Name = "lbl_formValidation";
+            this.lbl_formValidation.Size = new System.Drawing.Size(71, 15);
+            this.lbl_formValidation.TabIndex = 9;
+            this.lbl_formValidation.Text = "Error Message";
             // 
             // checkout
             // 
@@ -350,6 +363,7 @@ namespace projectPrototypeTwo
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(645, 510);
+            this.Controls.Add(this.lbl_formValidation);
             this.Controls.Add(this.btn_payNow);
             this.Controls.Add(this.txt_zipCode);
             this.Controls.Add(this.txt_city);
@@ -368,6 +382,7 @@ namespace projectPrototypeTwo
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "checkout";
             this.Text = "Checkout";
+            this.Load += new System.EventHandler(this.checkout_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -390,5 +405,6 @@ namespace projectPrototypeTwo
         private Guna.UI2.WinForms.Guna2TextBox txt_expDate;
         private Guna.UI2.WinForms.Guna2TextBox txt_cvv;
         private Guna.UI2.WinForms.Guna2Button btn_payNow;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_formValidation;
     }
 }

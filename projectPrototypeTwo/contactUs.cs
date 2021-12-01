@@ -15,6 +15,14 @@ namespace projectPrototypeTwo
         public contactUs()
         {
             InitializeComponent();
+            webBrowser1.ScriptErrorsSuppressed = true;
+        }
+
+        private void contactUs_Load(object sender, EventArgs e)
+        {
+            StringBuilder mapLocation = new StringBuilder();
+            mapLocation.Append("https://www.google.com/maps/@6.9064642,79.8697556,17z");
+            webBrowser1.Navigate(mapLocation.ToString());
         }
     }
 }

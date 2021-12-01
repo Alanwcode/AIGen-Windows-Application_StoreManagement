@@ -292,6 +292,7 @@ namespace projectPrototypeTwo
             this.btn_contactUs.TabIndex = 6;
             this.btn_contactUs.Text = "Contact Us";
             this.btn_contactUs.UseTransparentBackground = true;
+            this.btn_contactUs.Click += new System.EventHandler(this.btn_contactUs_Click);
             // 
             // btn_privacyPolicy
             // 

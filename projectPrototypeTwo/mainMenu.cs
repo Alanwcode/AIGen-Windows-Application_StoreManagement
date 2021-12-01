@@ -42,5 +42,11 @@ namespace projectPrototypeTwo
             termsAndconditions tac = new termsAndconditions();
             tac.ShowDialog();
         }
+
+        private void btn_contactUs_Click(object sender, EventArgs e)
+        {
+            contactUs cus = new contactUs();
+            cus.ShowDialog();
+        }
     }
 }

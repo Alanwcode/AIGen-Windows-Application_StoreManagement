@@ -570,7 +570,7 @@ namespace projectPrototypeTwo
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "register";
-            this.Text = "register";
+            this.Text = "Register - MegaTech";
             this.Load += new System.EventHandler(this.register_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_sitRobot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_searchRobotGIF)).EndInit();

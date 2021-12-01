@@ -660,7 +660,7 @@ namespace projectPrototypeTwo
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "customOrder";
-            this.Text = "customOrder";
+            this.Text = "Custom Orders";
             this.Load += new System.EventHandler(this.customOrder_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();

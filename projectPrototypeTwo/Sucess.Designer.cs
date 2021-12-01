@@ -105,6 +105,7 @@ namespace projectPrototypeTwo
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.guna2PictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Sucess";
             this.Text = "Sucess";
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();

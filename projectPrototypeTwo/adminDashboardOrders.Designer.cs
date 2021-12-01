@@ -32,6 +32,8 @@ namespace projectPrototypeTwo
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminDashboardOrders));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.btn_mainMenu = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientButton4 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -41,8 +43,6 @@ namespace projectPrototypeTwo
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.btn_mainMenu = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -64,6 +64,50 @@ namespace projectPrototypeTwo
             this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
             this.guna2GradientPanel1.Size = new System.Drawing.Size(191, 417);
             this.guna2GradientPanel1.TabIndex = 5;
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Separator1.FillColor = System.Drawing.Color.White;
+            this.guna2Separator1.Location = new System.Drawing.Point(7, 332);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(177, 11);
+            this.guna2Separator1.TabIndex = 4;
+            this.guna2Separator1.UseTransparentBackground = true;
+            // 
+            // btn_mainMenu
+            // 
+            this.btn_mainMenu.Animated = true;
+            this.btn_mainMenu.AutoRoundedCorners = true;
+            this.btn_mainMenu.BackColor = System.Drawing.Color.Transparent;
+            this.btn_mainMenu.BorderRadius = 21;
+            this.btn_mainMenu.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btn_mainMenu.CheckedState.ForeColor = System.Drawing.Color.Black;
+            this.btn_mainMenu.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btn_mainMenu.CheckedState.Parent = this.btn_mainMenu;
+            this.btn_mainMenu.CustomImages.Parent = this.btn_mainMenu;
+            this.btn_mainMenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_mainMenu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_mainMenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_mainMenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_mainMenu.DisabledState.Parent = this.btn_mainMenu;
+            this.btn_mainMenu.FillColor = System.Drawing.Color.Silver;
+            this.btn_mainMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_mainMenu.ForeColor = System.Drawing.Color.White;
+            this.btn_mainMenu.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(174)))), ((int)(((byte)(24)))));
+            this.btn_mainMenu.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btn_mainMenu.HoverState.Parent = this.btn_mainMenu;
+            this.btn_mainMenu.Image = ((System.Drawing.Image)(resources.GetObject("btn_mainMenu.Image")));
+            this.btn_mainMenu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_mainMenu.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btn_mainMenu.Location = new System.Drawing.Point(19, 354);
+            this.btn_mainMenu.Name = "btn_mainMenu";
+            this.btn_mainMenu.ShadowDecoration.Parent = this.btn_mainMenu;
+            this.btn_mainMenu.Size = new System.Drawing.Size(192, 45);
+            this.btn_mainMenu.TabIndex = 3;
+            this.btn_mainMenu.Text = "Main Menu";
+            this.btn_mainMenu.UseTransparentBackground = true;
+            this.btn_mainMenu.Click += new System.EventHandler(this.btn_mainMenu_Click);
             // 
             // guna2GradientButton4
             // 
@@ -239,7 +283,7 @@ namespace projectPrototypeTwo
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
             this.guna2PictureBox2.Size = new System.Drawing.Size(34, 30);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox2.TabIndex = 1;
             this.guna2PictureBox2.TabStop = false;
             this.guna2PictureBox2.UseTransparentBackground = true;
@@ -264,50 +308,6 @@ namespace projectPrototypeTwo
             this.guna2DragControl1.TargetControl = this.guna2Panel1;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
-            // btn_mainMenu
-            // 
-            this.btn_mainMenu.Animated = true;
-            this.btn_mainMenu.AutoRoundedCorners = true;
-            this.btn_mainMenu.BackColor = System.Drawing.Color.Transparent;
-            this.btn_mainMenu.BorderRadius = 21;
-            this.btn_mainMenu.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btn_mainMenu.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.btn_mainMenu.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.btn_mainMenu.CheckedState.Parent = this.btn_mainMenu;
-            this.btn_mainMenu.CustomImages.Parent = this.btn_mainMenu;
-            this.btn_mainMenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_mainMenu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_mainMenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_mainMenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_mainMenu.DisabledState.Parent = this.btn_mainMenu;
-            this.btn_mainMenu.FillColor = System.Drawing.Color.Silver;
-            this.btn_mainMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_mainMenu.ForeColor = System.Drawing.Color.White;
-            this.btn_mainMenu.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(174)))), ((int)(((byte)(24)))));
-            this.btn_mainMenu.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            this.btn_mainMenu.HoverState.Parent = this.btn_mainMenu;
-            this.btn_mainMenu.Image = ((System.Drawing.Image)(resources.GetObject("btn_mainMenu.Image")));
-            this.btn_mainMenu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_mainMenu.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btn_mainMenu.Location = new System.Drawing.Point(19, 354);
-            this.btn_mainMenu.Name = "btn_mainMenu";
-            this.btn_mainMenu.ShadowDecoration.Parent = this.btn_mainMenu;
-            this.btn_mainMenu.Size = new System.Drawing.Size(192, 45);
-            this.btn_mainMenu.TabIndex = 3;
-            this.btn_mainMenu.Text = "Main Menu";
-            this.btn_mainMenu.UseTransparentBackground = true;
-            this.btn_mainMenu.Click += new System.EventHandler(this.btn_mainMenu_Click);
-            // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Separator1.FillColor = System.Drawing.Color.White;
-            this.guna2Separator1.Location = new System.Drawing.Point(7, 332);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(177, 11);
-            this.guna2Separator1.TabIndex = 4;
-            this.guna2Separator1.UseTransparentBackground = true;
-            // 
             // adminDashboardOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -317,8 +317,9 @@ namespace projectPrototypeTwo
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "adminDashboardOrders";
-            this.Text = "adminDashboardOrders";
+            this.Text = "Admin - Orders";
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();

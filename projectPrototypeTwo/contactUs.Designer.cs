@@ -29,6 +29,7 @@ namespace projectPrototypeTwo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(contactUs));
             this.SuspendLayout();
             // 
             // contactUs
@@ -38,8 +39,9 @@ namespace projectPrototypeTwo
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "contactUs";
-            this.Text = "contactUs";
+            this.Text = "Contact Us";
             this.ResumeLayout(false);
 
         }

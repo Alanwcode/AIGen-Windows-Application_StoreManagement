@@ -86,7 +86,7 @@ namespace projectPrototypeTwo
             this.guna2GradientTileButton1.ShadowDecoration.Parent = this.guna2GradientTileButton1;
             this.guna2GradientTileButton1.Size = new System.Drawing.Size(806, 103);
             this.guna2GradientTileButton1.TabIndex = 1;
-            this.guna2GradientTileButton1.Text = "Welcome to AIGen Roboticts";
+            this.guna2GradientTileButton1.Text = "Welcome to MegaTech Roboticts";
             this.guna2GradientTileButton1.UseTransparentBackground = true;
             this.guna2GradientTileButton1.Click += new System.EventHandler(this.guna2GradientTileButton1_Click);
             // 

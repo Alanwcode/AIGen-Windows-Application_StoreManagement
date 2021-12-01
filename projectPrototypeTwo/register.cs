@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace projectPrototypeTwo
 {
@@ -86,9 +87,15 @@ namespace projectPrototypeTwo
                 count = count + 1;
             }
 
+
             if (string.IsNullOrEmpty(txt_NIC.Text))
             {
                 lbl_valNIC.Text = "Feild can't be null";
+                lbl_valNIC.Visible = true;
+            }
+            else if(!Regex.IsMatch(txt_NIC.Text, @"^([0-9]{9}[x|X|v|V]|[0-9]{12})$"))
+            {
+                lbl_valNIC.Text = "Invalid NIC! ";
                 lbl_valNIC.Visible = true;
             }
             else
@@ -96,9 +103,15 @@ namespace projectPrototypeTwo
                 count = count + 1;
             }
 
+
             if (string.IsNullOrEmpty(txt_email.Text))
             {
                 lbl_valEmail.Text = "Feild can't be null";
+                lbl_valEmail.Visible = true;
+            }
+            else if(!Regex.IsMatch(txt_email.Text, @"/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/"))
+            {
+                lbl_valEmail.Text = "e-mail didn't match with starnderd formats";
                 lbl_valEmail.Visible = true;
             }
             else
@@ -106,15 +119,22 @@ namespace projectPrototypeTwo
                 count = count + 1;
             }
 
+
             if (string.IsNullOrEmpty(txt_telephone.Text))
             {
                 lbl_valTelephone.Text = "Feild can't be null";
+                lbl_valTelephone.Visible = true;
+            }
+            else if (!Regex.IsMatch(txt_telephone.Text, @"^(?:0|94|\\+94)?(?:(11|21|23|24|25|26|27|31|32|33|34|35|36|37|38|41|45|47|51|52|54|55|57|63|65|66|67|81|912)(0|2|3|4|5|7|9)|7(0|1|2|5|6|7|8)\\d)\\d{6}$"))
+            {
+                lbl_valTelephone.Text = "Telephone number didn't match with starnderd formats";
                 lbl_valTelephone.Visible = true;
             }
             else
             {
                 count = count + 1;
             }
+
 
             if (string.IsNullOrEmpty(txt_address.Text))
             {
@@ -126,6 +146,7 @@ namespace projectPrototypeTwo
                 count = count + 1;
             }
 
+
             if (string.IsNullOrEmpty(txt_username.Text))
             {
                 lbl_valUsername.Text = "Feild can't be null";
@@ -136,6 +157,7 @@ namespace projectPrototypeTwo
                 count = count + 1;
             }
 
+
             if (string.IsNullOrEmpty(txt_password.Text))
             {
                 lbl_valPassword.Text = "Feild can't be null";
@@ -143,8 +165,17 @@ namespace projectPrototypeTwo
             }
             else
             {
-                count = count + 1;
+                if(!Regex.IsMatch(txt_password.Text, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"))
+                {
+                    lbl_valPassword.Text = "Passworsd must have uppercase letter, lowercase letter,number and special character";
+                    lbl_valPassword.Visible = true;
+                }
+                else
+                {
+                    count = count + 1;
+                }
             }
+
 
             if (string.IsNullOrEmpty(txt_confirmPassword.Text))
             {
@@ -153,7 +184,15 @@ namespace projectPrototypeTwo
             }
             else
             {
-                count = count + 1;
+                if (txt_confirmPassword.Text != txt_password.Text)
+                {
+                    lbl_valConfirmPassword.Text = "Password and Confirm Password is different";
+                    lbl_valConfirmPassword.Visible = true;
+                }
+                else
+                {
+                    count = count + 1;
+                }
             }
 
             

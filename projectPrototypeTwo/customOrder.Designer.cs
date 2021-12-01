@@ -182,10 +182,8 @@ namespace projectPrototypeTwo
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.AutoRoundedCorners = true;
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Panel2.BorderRadius = 20;
             this.guna2Panel2.BorderThickness = 2;
             this.guna2Panel2.Controls.Add(this.btn_clear);
             this.guna2Panel2.Controls.Add(this.btn_intergrate);
@@ -379,6 +377,7 @@ namespace projectPrototypeTwo
             this.cmbx_intergration.ShadowDecoration.Parent = this.cmbx_intergration;
             this.cmbx_intergration.Size = new System.Drawing.Size(225, 36);
             this.cmbx_intergration.TabIndex = 3;
+            this.cmbx_intergration.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // cmbx_camera
             // 
@@ -404,6 +403,7 @@ namespace projectPrototypeTwo
             this.cmbx_camera.ShadowDecoration.Parent = this.cmbx_camera;
             this.cmbx_camera.Size = new System.Drawing.Size(225, 36);
             this.cmbx_camera.TabIndex = 3;
+            this.cmbx_camera.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // btn_applyColorChange
             // 

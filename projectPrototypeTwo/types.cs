@@ -47,5 +47,29 @@ namespace projectPrototypeTwo
             termsAndconditions tac = new termsAndconditions();
             tac.ShowDialog();
         }
+
+        private void btn_purchaseItemOne_Click(object sender, EventArgs e)
+        {
+            checkout ch = new checkout();
+            ch.ShowDialog();
+        }
+
+        private void btn_purchaseItemTwo_Click(object sender, EventArgs e)
+        {
+            checkout ch = new checkout();
+            ch.ShowDialog();
+        }
+
+        private void btn_purchaseItemThree_Click(object sender, EventArgs e)
+        {
+            checkout ch = new checkout();
+            ch.ShowDialog();
+        }
+
+        private void btn_purchaseItemFoure_Click(object sender, EventArgs e)
+        {
+            checkout ch = new checkout();
+            ch.ShowDialog();
+        }
     }
 }

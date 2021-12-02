@@ -128,7 +128,7 @@ namespace projectPrototypeTwo
             this.pbx_white.BackColor = System.Drawing.Color.Transparent;
             this.pbx_white.Image = ((System.Drawing.Image)(resources.GetObject("pbx_white.Image")));
             this.pbx_white.ImageRotate = 0F;
-            this.pbx_white.Location = new System.Drawing.Point(47, 87);
+            this.pbx_white.Location = new System.Drawing.Point(17, 87);
             this.pbx_white.Name = "pbx_white";
             this.pbx_white.ShadowDecoration.Parent = this.pbx_white;
             this.pbx_white.Size = new System.Drawing.Size(285, 283);
@@ -142,7 +142,7 @@ namespace projectPrototypeTwo
             this.pbx_blue.BackColor = System.Drawing.Color.Transparent;
             this.pbx_blue.Image = ((System.Drawing.Image)(resources.GetObject("pbx_blue.Image")));
             this.pbx_blue.ImageRotate = 0F;
-            this.pbx_blue.Location = new System.Drawing.Point(47, 87);
+            this.pbx_blue.Location = new System.Drawing.Point(17, 87);
             this.pbx_blue.Name = "pbx_blue";
             this.pbx_blue.ShadowDecoration.Parent = this.pbx_blue;
             this.pbx_blue.Size = new System.Drawing.Size(285, 283);
@@ -156,7 +156,7 @@ namespace projectPrototypeTwo
             this.pbx_red.BackColor = System.Drawing.Color.Transparent;
             this.pbx_red.Image = ((System.Drawing.Image)(resources.GetObject("pbx_red.Image")));
             this.pbx_red.ImageRotate = 0F;
-            this.pbx_red.Location = new System.Drawing.Point(47, 87);
+            this.pbx_red.Location = new System.Drawing.Point(17, 87);
             this.pbx_red.Name = "pbx_red";
             this.pbx_red.ShadowDecoration.Parent = this.pbx_red;
             this.pbx_red.Size = new System.Drawing.Size(285, 283);
@@ -170,7 +170,7 @@ namespace projectPrototypeTwo
             this.pbx_yellow.BackColor = System.Drawing.Color.Transparent;
             this.pbx_yellow.Image = ((System.Drawing.Image)(resources.GetObject("pbx_yellow.Image")));
             this.pbx_yellow.ImageRotate = 0F;
-            this.pbx_yellow.Location = new System.Drawing.Point(47, 87);
+            this.pbx_yellow.Location = new System.Drawing.Point(17, 87);
             this.pbx_yellow.Name = "pbx_yellow";
             this.pbx_yellow.ShadowDecoration.Parent = this.pbx_yellow;
             this.pbx_yellow.Size = new System.Drawing.Size(285, 283);

@@ -156,6 +156,7 @@ namespace projectPrototypeTwo
             this.btn_privacyPolicy.TabIndex = 13;
             this.btn_privacyPolicy.Text = "Terms and Conditions";
             this.btn_privacyPolicy.UseTransparentBackground = true;
+            this.btn_privacyPolicy.Click += new System.EventHandler(this.btn_privacyPolicy_Click);
             // 
             // btn_contactUs
             // 
@@ -180,6 +181,7 @@ namespace projectPrototypeTwo
             this.btn_contactUs.TabIndex = 14;
             this.btn_contactUs.Text = "Contact Us";
             this.btn_contactUs.UseTransparentBackground = true;
+            this.btn_contactUs.Click += new System.EventHandler(this.btn_contactUs_Click);
             // 
             // btn_home
             // 
@@ -371,7 +373,7 @@ namespace projectPrototypeTwo
             this.guna2GradientButton4.ShadowDecoration.Parent = this.guna2GradientButton4;
             this.guna2GradientButton4.Size = new System.Drawing.Size(195, 30);
             this.guna2GradientButton4.TabIndex = 17;
-            this.guna2GradientButton4.Text = "btn_typeThree";
+            this.guna2GradientButton4.Text = "Buy Now for 5399 USD";
             this.guna2GradientButton4.UseTransparentBackground = true;
             // 
             // guna2GradientButton3
@@ -389,7 +391,7 @@ namespace projectPrototypeTwo
             this.guna2GradientButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2GradientButton3.DisabledState.Parent = this.guna2GradientButton3;
             this.guna2GradientButton3.FillColor = System.Drawing.Color.Gray;
-            this.guna2GradientButton3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2GradientButton3.FillColor2 = System.Drawing.Color.Gray;
             this.guna2GradientButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GradientButton3.ForeColor = System.Drawing.Color.White;
             this.guna2GradientButton3.HoverState.Parent = this.guna2GradientButton3;
@@ -398,7 +400,7 @@ namespace projectPrototypeTwo
             this.guna2GradientButton3.ShadowDecoration.Parent = this.guna2GradientButton3;
             this.guna2GradientButton3.Size = new System.Drawing.Size(195, 30);
             this.guna2GradientButton3.TabIndex = 17;
-            this.guna2GradientButton3.Text = "btn_typeThree";
+            this.guna2GradientButton3.Text = "Buy Now for 3990 USD";
             // 
             // guna2GradientButton2
             // 
@@ -424,7 +426,7 @@ namespace projectPrototypeTwo
             this.guna2GradientButton2.ShadowDecoration.Parent = this.guna2GradientButton2;
             this.guna2GradientButton2.Size = new System.Drawing.Size(195, 30);
             this.guna2GradientButton2.TabIndex = 18;
-            this.guna2GradientButton2.Text = "btn_typeTwo";
+            this.guna2GradientButton2.Text = "Buy Now for 3600 USD";
             // 
             // guna2GradientButton1
             // 
@@ -450,7 +452,7 @@ namespace projectPrototypeTwo
             this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
             this.guna2GradientButton1.Size = new System.Drawing.Size(195, 30);
             this.guna2GradientButton1.TabIndex = 19;
-            this.guna2GradientButton1.Text = "btn_typeOne";
+            this.guna2GradientButton1.Text = "Buy Now for 2360 USD";
             // 
             // guna2VSeparator3
             // 

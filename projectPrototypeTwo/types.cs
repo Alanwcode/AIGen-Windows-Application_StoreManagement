@@ -35,5 +35,17 @@ namespace projectPrototypeTwo
             mainMenu mm = new mainMenu();
             mm.Show();
         }
+
+        private void btn_contactUs_Click(object sender, EventArgs e)
+        {
+            contactUs cus = new contactUs();
+            cus.ShowDialog();
+        }
+
+        private void btn_privacyPolicy_Click(object sender, EventArgs e)
+        {
+            termsAndconditions tac = new termsAndconditions();
+            tac.ShowDialog();
+        }
     }
 }

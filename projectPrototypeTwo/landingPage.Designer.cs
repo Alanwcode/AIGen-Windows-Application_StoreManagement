@@ -167,10 +167,10 @@ namespace projectPrototypeTwo
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(193, 477);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(426, 14);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(463, 14);
             this.guna2HtmlLabel1.TabIndex = 6;
-            this.guna2HtmlLabel1.Text = "copyright © AIGen Robeticts inc Sri Lanka | All Rights Reserved. Design and Devel" +
-    "oped by team AIGen";
+            this.guna2HtmlLabel1.Text = "copyright © MegaTech Robeticts inc Sri Lanka | All Rights Reserved. Design and De" +
+    "veloped by MegaTech team.";
             // 
             // guna2DragControl1
             // 

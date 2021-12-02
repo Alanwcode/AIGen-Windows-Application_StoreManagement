@@ -152,6 +152,11 @@ namespace projectPrototypeTwo
                 lbl_valUsername.Text = "Feild can't be null";
                 lbl_valUsername.Visible = true;
             }
+            else if(txt_username.Text == "asminA" || txt_username.Text == "asminU" || txt_username.Text == "asminH" || txt_username.Text == "asminR")
+            {
+                lbl_valUsername.Text = "Username not available";
+                lbl_valUsername.Visible = true;
+            }
             else
             {
                 count = count + 1;

@@ -141,7 +141,7 @@ namespace projectPrototypeTwo
             this.guna2GradientButton4.ShadowDecoration.Parent = this.guna2GradientButton4;
             this.guna2GradientButton4.Size = new System.Drawing.Size(190, 42);
             this.guna2GradientButton4.TabIndex = 0;
-            this.guna2GradientButton4.Text = "STOCKS";
+            this.guna2GradientButton4.Text = "USER LOGS";
             this.guna2GradientButton4.UseTransparentBackground = true;
             // 
             // guna2GradientButton3
@@ -270,9 +270,9 @@ namespace projectPrototypeTwo
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(52, 12);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(160, 15);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(150, 15);
             this.guna2HtmlLabel1.TabIndex = 2;
-            this.guna2HtmlLabel1.Text = "Administrator Dashboard - Stocks";
+            this.guna2HtmlLabel1.Text = "Administrator Dashboard - Logs";
             // 
             // guna2PictureBox2
             // 

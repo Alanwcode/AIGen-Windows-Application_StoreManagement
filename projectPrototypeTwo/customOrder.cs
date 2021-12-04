@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace projectPrototypeTwo
 {
@@ -24,6 +25,9 @@ namespace projectPrototypeTwo
         double remoteAccess = 0;
         double integrate = 0;
 
+        string color = "white", intergration = "None";
+        int camQualityCh = 3, remoteAccessCh = 0, voiceControlCh = 0; 
+
         private void btn_applyColorChange_Click(object sender, EventArgs e)
         {
             colorPrice = 0;
@@ -35,6 +39,7 @@ namespace projectPrototypeTwo
                 pbx_yellow.Visible = false;
                 pbx_white.Visible = true;
                 colorPrice = 0;
+                color = "White";
             }
             else if (rad_blue.Checked)
             {
@@ -43,6 +48,7 @@ namespace projectPrototypeTwo
                 pbx_yellow.Visible = false;
                 pbx_white.Visible = false;
                 colorPrice = 400;
+                color = "Blue";
             }
             else if (rad_red.Checked)
             {
@@ -51,6 +57,7 @@ namespace projectPrototypeTwo
                 pbx_yellow.Visible = false;
                 pbx_white.Visible = false;
                 colorPrice = 550;
+                color = "Red";
             }
             else if (rad_yellow.Checked)
             {
@@ -59,6 +66,7 @@ namespace projectPrototypeTwo
                 pbx_yellow.Visible = true;
                 pbx_white.Visible = false;
                 colorPrice = 200;
+                color = "Yellow";
             }
             else
             {
@@ -86,6 +94,8 @@ namespace projectPrototypeTwo
         {
             price = 4899;
             lbl_totalPrice.Text = price.ToString() + " USD";
+            color = "white"; intergration = "None";
+            camQualityCh = 3; remoteAccessCh = 0; voiceControlCh = 0;
         }
 
         private void btn_voiceControl_Click(object sender, EventArgs e)
@@ -93,6 +103,7 @@ namespace projectPrototypeTwo
             voiceControl = 1200;
             price = Dprice + colorPrice + cameraPrice + voiceControl + remoteAccess + integrate;
             lbl_totalPrice.Text = price.ToString() + " USD";
+            voiceControlCh = 1;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -100,6 +111,7 @@ namespace projectPrototypeTwo
             remoteAccess = 2500;
             price = Dprice + colorPrice + cameraPrice + voiceControl + remoteAccess + integrate;
             lbl_totalPrice.Text = price.ToString() + " USD";
+            remoteAccessCh = 1;
         }
 
         private void btn_intergrate_Click(object sender, EventArgs e)
@@ -107,18 +119,22 @@ namespace projectPrototypeTwo
             if (cmbx_intergration.SelectedIndex == 0)
             {
                 integrate = 0;
+                intergration = "None";
             }
             else if (cmbx_intergration.SelectedIndex == 1)
             {
                 integrate = 300;
+                intergration = "Alexa";
             }
             else if (cmbx_intergration.SelectedIndex == 2)
             {
                 integrate = 400;
+                intergration = "Siri";
             }
             else if (cmbx_intergration.SelectedIndex == 3)
             {
                 integrate = 150;
+                intergration = "Cortona";
             }
             else
             {
@@ -132,8 +148,31 @@ namespace projectPrototypeTwo
 
         private void btn_purchase_Click(object sender, EventArgs e)
         {
-            checkout ch = new checkout();
-            ch.ShowDialog();
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTech;Integrated Security=True");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("insert into customProducts (color, camQuality, intergration, remoteAccess, voiceControl, price) values (@a, @b, @c, @d, @e, @f)", con);
+            cmd.Parameters.AddWithValue("a", color.ToString());
+            cmd.Parameters.AddWithValue("b", camQualityCh);
+            cmd.Parameters.AddWithValue("c", intergration);
+            cmd.Parameters.AddWithValue("d", remoteAccessCh);
+            cmd.Parameters.AddWithValue("e", voiceControlCh);
+            cmd.Parameters.AddWithValue("f", price);
+
+            int i = cmd.ExecuteNonQuery();
+            if (i == 1)
+            {
+                checkout ch = new checkout();
+                ch.ShowDialog();
+            }
+            else
+            {
+                error404F err = new error404F();
+                err.ShowDialog();
+            }
+
+            con.Close();
+            cmd.Dispose();
+            
         }
 
         private void btn_clear_Click_1(object sender, EventArgs e)
@@ -161,12 +200,15 @@ namespace projectPrototypeTwo
             if (cmbx_camera.SelectedIndex == 0)
             {
                 cameraPrice = 0;
+                camQualityCh = 3;
             }else if (cmbx_camera.SelectedIndex == 1)
             {
                 cameraPrice = 600;
+                camQualityCh = 8;
             }else if (cmbx_camera.SelectedIndex == 2)
             {
                 cameraPrice = 800;
+                camQualityCh = 12;
             }
             else
             {

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Data.SqlClient;
 
 namespace projectPrototypeTwo
 {
@@ -157,6 +158,11 @@ namespace projectPrototypeTwo
                 lbl_valUsername.Text = "Username not available";
                 lbl_valUsername.Visible = true;
             }
+            else if(txt_username.Text.Length > 20)
+            {
+                lbl_valUsername.Text = "Username length exceeded, max length is 20";
+                lbl_valUsername.Visible = true;
+            }
             else
             {
                 count = count + 1;
@@ -196,15 +202,27 @@ namespace projectPrototypeTwo
 
             if(count == 8)
             {
-                Sucess suc = new Sucess();
-                suc.ShowDialog();
+                SqlConnection con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTech;Integrated Security=True");
+                con.Open();
+                SqlCommand cmd = new SqlCommand("insert into Customer values('"+ Convert.ToString(txt_NIC.Text) +"', '"+ Convert.ToString(txt_name.Text) +"', '"+ Convert.ToString(txt_address.Text) +"', '"+ Convert.ToString(txt_email.Text) +"', '"+ Convert.ToString(txt_telephone.Text) + "', '"+ Convert.ToString(txt_username.Text) +"', '"+ Convert.ToString(txt_password.Text) +"')", con);
+                int i = cmd.ExecuteNonQuery();
+                if (i == 1)
+                {
+                    Sucess suc = new Sucess();
+                    suc.ShowDialog();
+                }
+                else
+                {
+                    error404F err = new error404F();
+                    err.ShowDialog();
+                }
+                con.Close();
+                cmd.Dispose();
             }
             else
             {
                 pbx_searchRobotGIF.Visible = true;
                 pbx_sitRobot.Visible = false;
-                //messageBox mbx = new messageBox();
-                //mbx.ShowDialog();
             }
         }
     }

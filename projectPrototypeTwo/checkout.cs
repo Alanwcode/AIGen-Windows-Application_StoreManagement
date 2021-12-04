@@ -8,14 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Data.SqlClient;
 
 namespace projectPrototypeTwo
 {
     public partial class checkout : Form
     {
-        public checkout()
+        public checkout(string pNum, double price)
         {
             InitializeComponent();
+            lbl_productNumber.Text = pNum.ToString();
+            lbl_price.Text = price.ToString();
         }
 
         private void btn_payNow_Click(object sender, EventArgs e)
@@ -29,9 +32,22 @@ namespace projectPrototypeTwo
             }
             else
             {
-                Sucess suc = new Sucess();
-                suc.ShowDialog();
-                this.Close();
+                SqlConnection con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTech;Integrated Security=True");
+                con.Open();
+                SqlCommand cmd = new SqlCommand("insert into Order ", con);
+                int i = cmd.ExecuteNonQuery();
+                if (i == 1)
+                {
+                    Sucess suc = new Sucess();
+                    suc.ShowDialog();
+                }
+                else
+                {
+                    error404F err = new error404F();
+                    err.ShowDialog();
+                }
+                con.Close();
+                cmd.Dispose();
             }
         }
 

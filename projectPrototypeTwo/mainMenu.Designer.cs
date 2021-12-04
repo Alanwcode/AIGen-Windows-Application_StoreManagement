@@ -237,12 +237,12 @@ namespace projectPrototypeTwo
             this.btn_login.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_login.ForeColor = System.Drawing.Color.White;
             this.btn_login.HoverState.Parent = this.btn_login;
-            this.btn_login.Location = new System.Drawing.Point(710, 52);
+            this.btn_login.Location = new System.Drawing.Point(653, 52);
             this.btn_login.Name = "btn_login";
             this.btn_login.ShadowDecoration.Parent = this.btn_login;
-            this.btn_login.Size = new System.Drawing.Size(87, 27);
+            this.btn_login.Size = new System.Drawing.Size(144, 27);
             this.btn_login.TabIndex = 5;
-            this.btn_login.Text = "Log in";
+            this.btn_login.Text = "Log in or Register";
             this.btn_login.UseTransparentBackground = true;
             this.btn_login.Click += new System.EventHandler(this.guna2Button3_Click);
             // 

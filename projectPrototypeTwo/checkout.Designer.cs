@@ -45,6 +45,10 @@ namespace projectPrototypeTwo
             this.txt_cvv = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_payNow = new Guna.UI2.WinForms.Guna2Button();
             this.lbl_formValidation = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbl_productNumber = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbl_price = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +58,7 @@ namespace projectPrototypeTwo
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(588, 8);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(601, 8);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
@@ -75,7 +79,7 @@ namespace projectPrototypeTwo
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(326, 115);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(326, 94);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
             this.guna2PictureBox1.Size = new System.Drawing.Size(289, 277);
@@ -356,13 +360,61 @@ namespace projectPrototypeTwo
             this.lbl_formValidation.TabIndex = 9;
             this.lbl_formValidation.Text = "Error Message";
             // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(383, 387);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(122, 18);
+            this.guna2HtmlLabel4.TabIndex = 10;
+            this.guna2HtmlLabel4.Text = "Product Number :";
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(383, 411);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(47, 18);
+            this.guna2HtmlLabel5.TabIndex = 10;
+            this.guna2HtmlLabel5.Text = "Price : ";
+            // 
+            // lbl_productNumber
+            // 
+            this.lbl_productNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_productNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_productNumber.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_productNumber.Location = new System.Drawing.Point(519, 387);
+            this.lbl_productNumber.Name = "lbl_productNumber";
+            this.lbl_productNumber.Size = new System.Drawing.Size(114, 18);
+            this.lbl_productNumber.TabIndex = 10;
+            this.lbl_productNumber.Text = "Product Number";
+            // 
+            // lbl_price
+            // 
+            this.lbl_price.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_price.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_price.Location = new System.Drawing.Point(450, 411);
+            this.lbl_price.Name = "lbl_price";
+            this.lbl_price.Size = new System.Drawing.Size(114, 18);
+            this.lbl_price.TabIndex = 10;
+            this.lbl_price.Text = "Product Number";
+            // 
             // checkout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(645, 510);
+            this.ClientSize = new System.Drawing.Size(658, 510);
+            this.Controls.Add(this.guna2HtmlLabel5);
+            this.Controls.Add(this.lbl_price);
+            this.Controls.Add(this.lbl_productNumber);
+            this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.lbl_formValidation);
             this.Controls.Add(this.btn_payNow);
             this.Controls.Add(this.txt_zipCode);
@@ -406,5 +458,9 @@ namespace projectPrototypeTwo
         private Guna.UI2.WinForms.Guna2TextBox txt_cvv;
         private Guna.UI2.WinForms.Guna2Button btn_payNow;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_formValidation;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_productNumber;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_price;
     }
 }

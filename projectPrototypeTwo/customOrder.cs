@@ -161,8 +161,12 @@ namespace projectPrototypeTwo
             int i = cmd.ExecuteNonQuery();
             if (i == 1)
             {
-                checkout ch = new checkout();
-                ch.ShowDialog();
+                SqlCommand ccm = new SqlCommand("select prodNumber from customProducts where price = @f");
+                SqlDataReader dr = ccm.ExecuteReader();
+                string prodNum = dr["prodNumber"].ToString();
+                checkout ch = new checkout(prodNum, price);
+                ch.Show();
+                this.Hide();
             }
             else
             {
@@ -172,7 +176,6 @@ namespace projectPrototypeTwo
 
             con.Close();
             cmd.Dispose();
-            
         }
 
         private void btn_clear_Click_1(object sender, EventArgs e)

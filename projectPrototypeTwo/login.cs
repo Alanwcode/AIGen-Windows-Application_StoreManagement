@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace projectPrototypeTwo
 {
@@ -34,8 +35,15 @@ namespace projectPrototypeTwo
 
         private void btn_login_Click(object sender, EventArgs e)
         {
+
             lbl_val_invalid.Visible = false;
-            if (txt_username.Text == "admin" && txt_password.Text == "admin123")
+
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTech;Integrated Security=True");
+            SqlDataAdapter da = new SqlDataAdapter("select count(*) from adminLogin where username = '" + txt_username.Text + "' and passUser = '" + txt_password.Text + "'", con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            if (dt.Rows[0][0].ToString() == "1")
             {
                 adminDashboardHome adD = new adminDashboardHome();
                 adD.Show();

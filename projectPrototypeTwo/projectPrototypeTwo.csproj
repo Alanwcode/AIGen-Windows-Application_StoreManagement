@@ -128,6 +128,7 @@
     <Compile Include="error404F.Designer.cs">
       <DependentUpon>error404F.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logins.cs" />
     <Compile Include="messageBox.cs">
       <SubType>Form</SubType>
     </Compile>

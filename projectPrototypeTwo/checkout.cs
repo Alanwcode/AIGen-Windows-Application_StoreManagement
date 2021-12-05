@@ -34,7 +34,7 @@ namespace projectPrototypeTwo
             {
                 SqlConnection con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTech;Integrated Security=True");
                 con.Open();
-                SqlCommand cmd = new SqlCommand("insert into Order ", con);
+                SqlCommand cmd = new SqlCommand("insert into Orders (cusNIC, PID, deliveryAddress) values ('"+txt_NIC.Text+"','"+lbl_productNumber.Text+"','"+txt_addressOne.Text +", "+ txt_addressTwo.Text + ", " + txt_city.Text +"')", con);
                 int i = cmd.ExecuteNonQuery();
                 if (i == 1)
                 {

@@ -58,8 +58,8 @@ namespace projectPrototypeTwo
 
                 if (dtUL.Rows[0][0].ToString() == "1")
                 {
-                    checkout ch = new checkout(txt_username.Text);
-                    ch.Show();
+                    Sucess su = new Sucess();
+                    su.ShowDialog();
                 }
                 else
                 {

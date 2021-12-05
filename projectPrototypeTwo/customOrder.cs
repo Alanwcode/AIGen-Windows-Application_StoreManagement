@@ -161,12 +161,18 @@ namespace projectPrototypeTwo
             int i = cmd.ExecuteNonQuery();
             if (i == 1)
             {
-                SqlCommand ccm = new SqlCommand("select prodNumber from customProducts where price = @f");
+                SqlCommand ccm = new SqlCommand("select prodNumber from customProducts where price = '"+price+"'", con);
                 SqlDataReader dr = ccm.ExecuteReader();
-                string prodNum = dr["prodNumber"].ToString();
+                string prodNum = "";
+                while (dr.Read())
+                {
+                    byte[] array = new byte[4];
+                    prodNum = dr.GetValue(array[0]).ToString();
+                }
+                //string prodNum = dr["prodNumber"].ToString();
                 checkout ch = new checkout(prodNum, price);
                 ch.Show();
-                this.Hide();
+                //this.Hide();
             }
             else
             {

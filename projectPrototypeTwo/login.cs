@@ -58,6 +58,9 @@ namespace projectPrototypeTwo
 
                 if (dtUL.Rows[0][0].ToString() == "1")
                 {
+                    Logins lg = new Logins();
+                    lg.saveUsername(txt_username.Text);
+                    lg.updateLoginStatus(true);
                     Sucess su = new Sucess();
                     su.ShowDialog();
                 }

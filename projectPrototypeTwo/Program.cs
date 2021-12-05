@@ -17,6 +17,7 @@ namespace projectPrototypeTwo
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new landingPage());
+            Logins lg = new Logins();
         }
     }
 }

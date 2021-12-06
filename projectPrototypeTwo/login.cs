@@ -24,7 +24,7 @@ namespace projectPrototypeTwo
         {
             register reg = new register();
             this.Close();
-            reg.ShowDialog();
+            reg.Show();
         }
 
         private void btn_privacyPolicy_Click(object sender, EventArgs e)
@@ -62,7 +62,7 @@ namespace projectPrototypeTwo
                     lg.saveUsername(txt_username.Text);
                     lg.updateLoginStatus(true);
                     Sucess su = new Sucess();
-                    su.ShowDialog();
+                    su.Show();
                 }
                 else
                 {

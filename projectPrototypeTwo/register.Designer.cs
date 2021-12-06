@@ -330,6 +330,7 @@ namespace projectPrototypeTwo
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(44, 39);
             this.guna2ControlBox1.TabIndex = 6;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // pbx_sitRobot
             // 

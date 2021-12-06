@@ -25,6 +25,7 @@ namespace projectPrototypeTwo
             {
                 login log = new login();
                 log.ShowDialog();
+                this.Close();
             }
         }
 

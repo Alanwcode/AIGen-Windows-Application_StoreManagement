@@ -8,8 +8,8 @@ namespace projectPrototypeTwo
 {
     class Logins
     {
-        bool loginStatus = false;
-        string loggedUserName ;
+        public bool loginStatus = false;
+        public string loggedUserName ;
 
         public void checkLoginStatus()
         {

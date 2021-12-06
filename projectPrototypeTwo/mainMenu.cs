@@ -17,11 +17,15 @@ namespace projectPrototypeTwo
             InitializeComponent();
         }
 
+        Logins logs = new Logins();
+
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            login log = new login();
-            log.ShowDialog();
-            this.Close();
+            if (logs.loginStatus == false)
+            {
+                login log = new login();
+                log.ShowDialog();
+            }
         }
 
         private void btn_customOrder_Click(object sender, EventArgs e)
@@ -52,6 +56,14 @@ namespace projectPrototypeTwo
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void mainMenu_Load(object sender, EventArgs e)
+        {
+            if (logs.loginStatus == true)
+            {
+                btn_login.Visible = false;
+            }
         }
     }
 }

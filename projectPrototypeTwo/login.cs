@@ -67,7 +67,6 @@ namespace projectPrototypeTwo
                     lg.updateLoginStatus(true);
                     Sucess su = new Sucess();
                     su.Show();
-                    this.Close();
                 }
                 else
                 {

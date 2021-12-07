@@ -14,12 +14,24 @@ namespace projectPrototypeTwo
 {
     public partial class checkout : Form
     {
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTech;Integrated Security=True");
+
         public checkout(string pNum, double price)
         {
             InitializeComponent();
             lbl_productNumber.Text = pNum.ToString();
             lbl_price.Text = price.ToString();
             logs.checkLoginStatus();
+
+            con.Open();
+            SqlCommand ccm = new SqlCommand("select NIC from Customer where username = '" + logs.loggedUserName + "'", con);
+            SqlDataReader dr = ccm.ExecuteReader();
+            
+            while (dr.Read())
+            {
+                byte[] array = new byte[4];
+                txt_NIC.Text = dr.GetValue(array[0]).ToString();
+            }
         }
 
         Logins logs = new Logins();
@@ -35,7 +47,7 @@ namespace projectPrototypeTwo
             }
             else
             {
-                SqlConnection con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTech;Integrated Security=True");
+                
                 con.Open();
                 SqlCommand cmd = new SqlCommand("insert into Orders (cusNIC, PID, deliveryAddress) values ('"+txt_NIC.Text+"','"+lbl_productNumber.Text+"','"+txt_addressOne.Text +", "+ txt_addressTwo.Text + ", " + txt_city.Text +"')", con);
                 int i = cmd.ExecuteNonQuery();

@@ -73,11 +73,7 @@ namespace projectPrototypeTwo
 
         private void mainMenu_Load(object sender, EventArgs e)
         {
-            logs.checkLoginStatus();
-            if (logs.loginStatus == true)
-            {
-                btn_login.Text = "Log out";
-            }
+            
         }
 
         private void btn_register_Click(object sender, EventArgs e)

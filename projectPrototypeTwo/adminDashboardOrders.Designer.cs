@@ -147,7 +147,7 @@ namespace projectPrototypeTwo
             this.guna2GradientButton4.ShadowDecoration.Parent = this.guna2GradientButton4;
             this.guna2GradientButton4.Size = new System.Drawing.Size(190, 42);
             this.guna2GradientButton4.TabIndex = 0;
-            this.guna2GradientButton4.Text = "USER LOGS";
+            this.guna2GradientButton4.Text = "VPRODUCTS";
             this.guna2GradientButton4.UseTransparentBackground = true;
             this.guna2GradientButton4.Click += new System.EventHandler(this.guna2GradientButton4_Click);
             // 

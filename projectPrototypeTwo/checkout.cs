@@ -32,6 +32,8 @@ namespace projectPrototypeTwo
                 byte[] array = new byte[4];
                 txt_NIC.Text = dr.GetValue(array[0]).ToString();
             }
+            con.Close();
+            ccm.Dispose();
         }
 
         Logins logs = new Logins();

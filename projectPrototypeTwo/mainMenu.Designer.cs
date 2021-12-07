@@ -40,9 +40,6 @@ namespace projectPrototypeTwo
             this.btn_customOrder = new Guna.UI2.WinForms.Guna2Button();
             this.btn_existingOrder = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.btn_login = new Guna.UI2.WinForms.Guna2Button();
             this.btn_home = new Guna.UI2.WinForms.Guna2Button();
             this.btn_contactUs = new Guna.UI2.WinForms.Guna2Button();
@@ -183,43 +180,17 @@ namespace projectPrototypeTwo
             // 
             // label1
             // 
+            this.label1.AllowDrop = true;
+            this.label1.AutoEllipsis = true;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(409, 180);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(320, 15);
+            this.label1.Size = new System.Drawing.Size(331, 45);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Customize your Robot or purchase pre-customized robots";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(424, 194);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(289, 15);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Order and wait we will send your robot to your place.";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(417, 209);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(310, 15);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(418, 224);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(299, 15);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Nullam pellentesque justo vel ante accumsan laoreet.";
+            this.label1.Text = "Buy and upgrade a robot of your choice in any color you like.\r\n We will deliver t" +
+    "o your doorstep.Megatech will happily take \r\ncare of your life";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // btn_login
             // 
@@ -364,9 +335,6 @@ namespace projectPrototypeTwo
             this.Controls.Add(this.btn_contactUs);
             this.Controls.Add(this.btn_home);
             this.Controls.Add(this.btn_login);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_existingOrder);
             this.Controls.Add(this.btn_customOrder);
@@ -399,9 +367,6 @@ namespace projectPrototypeTwo
         private Guna.UI2.WinForms.Guna2Button btn_customOrder;
         private Guna.UI2.WinForms.Guna2Button btn_existingOrder;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Button btn_login;
         private Guna.UI2.WinForms.Guna2Button btn_home;
         private Guna.UI2.WinForms.Guna2Button btn_contactUs;

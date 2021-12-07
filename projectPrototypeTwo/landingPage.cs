@@ -40,6 +40,7 @@ namespace projectPrototypeTwo
             this.Hide();
             Logins log = new Logins();
             log.newSessionADD();
+            log.loginStatus = false;
         }
     }
 }

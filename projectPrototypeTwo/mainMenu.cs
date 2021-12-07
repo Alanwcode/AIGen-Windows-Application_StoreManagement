@@ -21,6 +21,10 @@ namespace projectPrototypeTwo
             {
                 btn_login.Text = "Log out";
             }
+            else
+            {
+                btn_login.Text = "Log in";
+            }
         }
 
         Logins logs = new Logins();

@@ -48,6 +48,7 @@ namespace projectPrototypeTwo
             this.btn_contactUs = new Guna.UI2.WinForms.Guna2Button();
             this.btn_privacyPolicy = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.btn_register = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -237,12 +238,12 @@ namespace projectPrototypeTwo
             this.btn_login.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_login.ForeColor = System.Drawing.Color.White;
             this.btn_login.HoverState.Parent = this.btn_login;
-            this.btn_login.Location = new System.Drawing.Point(653, 52);
+            this.btn_login.Location = new System.Drawing.Point(717, 52);
             this.btn_login.Name = "btn_login";
             this.btn_login.ShadowDecoration.Parent = this.btn_login;
-            this.btn_login.Size = new System.Drawing.Size(144, 27);
+            this.btn_login.Size = new System.Drawing.Size(80, 27);
             this.btn_login.TabIndex = 5;
-            this.btn_login.Text = "Log in or Register";
+            this.btn_login.Text = "Log in";
             this.btn_login.UseTransparentBackground = true;
             this.btn_login.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
@@ -326,12 +327,39 @@ namespace projectPrototypeTwo
             this.guna2DragControl1.TargetControl = this.guna2Panel1;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
+            // btn_register
+            // 
+            this.btn_register.Animated = true;
+            this.btn_register.AutoRoundedCorners = true;
+            this.btn_register.BackColor = System.Drawing.Color.Transparent;
+            this.btn_register.BorderRadius = 12;
+            this.btn_register.CheckedState.Parent = this.btn_register;
+            this.btn_register.CustomImages.Parent = this.btn_register;
+            this.btn_register.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_register.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_register.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_register.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_register.DisabledState.Parent = this.btn_register;
+            this.btn_register.FillColor = System.Drawing.Color.Gray;
+            this.btn_register.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_register.ForeColor = System.Drawing.Color.White;
+            this.btn_register.HoverState.Parent = this.btn_register;
+            this.btn_register.Location = new System.Drawing.Point(616, 52);
+            this.btn_register.Name = "btn_register";
+            this.btn_register.ShadowDecoration.Parent = this.btn_register;
+            this.btn_register.Size = new System.Drawing.Size(95, 27);
+            this.btn_register.TabIndex = 7;
+            this.btn_register.Text = "Register";
+            this.btn_register.UseTransparentBackground = true;
+            this.btn_register.Click += new System.EventHandler(this.btn_register_Click);
+            // 
             // mainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(856, 509);
+            this.Controls.Add(this.btn_register);
             this.Controls.Add(this.btn_privacyPolicy);
             this.Controls.Add(this.btn_contactUs);
             this.Controls.Add(this.btn_home);
@@ -379,5 +407,6 @@ namespace projectPrototypeTwo
         private Guna.UI2.WinForms.Guna2Button btn_contactUs;
         private Guna.UI2.WinForms.Guna2Button btn_privacyPolicy;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2Button btn_register;
     }
 }

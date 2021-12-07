@@ -33,6 +33,8 @@ namespace projectPrototypeTwo
             tac.ShowDialog();
         }
 
+        Logins logs = new Logins();
+
         private void btn_login_Click(object sender, EventArgs e)
         {
 
@@ -46,6 +48,7 @@ namespace projectPrototypeTwo
 
             if (dt.Rows[0][0].ToString() == "1")
             {
+                logs.userLogUpdate(txt_username.Text);
                 adminDashboardHome adD = new adminDashboardHome();
                 adD.Show();
                 this.Close();
@@ -59,10 +62,12 @@ namespace projectPrototypeTwo
                 if (dtUL.Rows[0][0].ToString() == "1")
                 {
                     Logins lg = new Logins();
+                    logs.userLogUpdate(txt_username.Text);
                     lg.saveUsername(txt_username.Text);
                     lg.updateLoginStatus(true);
                     Sucess su = new Sucess();
                     su.Show();
+                    this.Close();
                 }
                 else
                 {

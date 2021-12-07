@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace projectPrototypeTwo
 {
@@ -10,13 +11,33 @@ namespace projectPrototypeTwo
     {
         public bool loginStatus = false;
         public string loggedUserName ;
+        string fileName = "sessions.bat";
+
+        public void newSessionADD()
+        {
+            File.WriteAllText(fileName, "New");
+        }
+
+        public void userLogUpdate(string value)
+        {
+            File.WriteAllText(fileName, value);
+        }
+
+        public void readLogData()
+        {
+            loggedUserName =  File.ReadAllText(fileName);
+        }
 
         public void checkLoginStatus()
         {
-            if (loginStatus == false)
+            readLogData();
+            if (loggedUserName == "New")
             {
-                login log = new login();
-                log.ShowDialog();
+                loginStatus = false;
+            }
+            else
+            {
+                loginStatus = true;
             }
         }
 

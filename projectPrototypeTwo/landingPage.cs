@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace projectPrototypeTwo
 {
@@ -37,6 +38,8 @@ namespace projectPrototypeTwo
             mainMenu mm = new mainMenu();
             mm.Show();
             this.Hide();
+            Logins log = new Logins();
+            log.newSessionADD();
         }
     }
 }

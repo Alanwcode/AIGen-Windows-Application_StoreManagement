@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace projectPrototypeTwo
 {
@@ -15,17 +16,28 @@ namespace projectPrototypeTwo
         public mainMenu()
         {
             InitializeComponent();
+            logs.checkLoginStatus();
+            if (logs.loginStatus == true)
+            {
+                btn_login.Text = "Log out";
+            }
         }
 
         Logins logs = new Logins();
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
+            logs.checkLoginStatus();
             if (logs.loginStatus == false)
             {
                 login log = new login();
                 log.ShowDialog();
                 this.Close();
+            }
+            else
+            {
+                logs.loginStatus = false;
+                btn_login.Text = "log in";
             }
         }
 
@@ -61,10 +73,17 @@ namespace projectPrototypeTwo
 
         private void mainMenu_Load(object sender, EventArgs e)
         {
+            logs.checkLoginStatus();
             if (logs.loginStatus == true)
             {
-                btn_login.Visible = false;
+                btn_login.Text = "Log out";
             }
+        }
+
+        private void btn_register_Click(object sender, EventArgs e)
+        {
+            register reg = new register();
+            reg.ShowDialog();
         }
     }
 }

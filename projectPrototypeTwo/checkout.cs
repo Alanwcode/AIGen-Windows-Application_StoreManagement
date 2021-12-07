@@ -19,7 +19,10 @@ namespace projectPrototypeTwo
             InitializeComponent();
             lbl_productNumber.Text = pNum.ToString();
             lbl_price.Text = price.ToString();
+            logs.checkLoginStatus();
         }
+
+        Logins logs = new Logins();
 
         private void btn_payNow_Click(object sender, EventArgs e)
         {
@@ -54,6 +57,11 @@ namespace projectPrototypeTwo
         private void checkout_Load(object sender, EventArgs e)
         {
             lbl_formValidation.Visible = false;
+            if (logs.loginStatus == false)
+            {
+                login log = new login();
+                log.ShowDialog();
+            }
         }
     }
 }

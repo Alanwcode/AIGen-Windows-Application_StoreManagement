@@ -50,50 +50,61 @@ namespace projectPrototypeTwo
 
         private void adminDashboardHome_Load(object sender, EventArgs e)
         {
-            con.Open();
-            SqlCommand ccm = new SqlCommand("select count(OID) from Orders where oDate = getdate()", con);
-            SqlDataReader dr = ccm.ExecuteReader();
-            string tDeals = "";
-            while (dr.Read())
+            try
             {
-                byte[] array = new byte[4];
-                tDeals = dr.GetValue(array[0]).ToString();
-            }
-            lbl_todayDeals.Text = tDeals;
-            ccm.Dispose();
-            dr.Close();
+                con.Open();
+                SqlCommand ccm = new SqlCommand("select count(OID) from Orders where oDate = getdate()", con);
+                SqlDataReader dr = ccm.ExecuteReader();
+                string tDeals = "";
+                while (dr.Read())
+                {
+                    byte[] array = new byte[4];
+                    tDeals = dr.GetValue(array[0]).ToString();
+                }
+                lbl_todayDeals.Text = tDeals;
+                ccm.Dispose();
+                dr.Close();
 
-            SqlCommand ccmTwo = new SqlCommand("select count(NIC) from Customer", con);
-            SqlDataReader daTwo = ccmTwo.ExecuteReader();
-            while (daTwo.Read())
+                SqlCommand ccmTwo = new SqlCommand("select count(NIC) from Customer", con);
+                SqlDataReader daTwo = ccmTwo.ExecuteReader();
+                while (daTwo.Read())
+                {
+                    byte[] array = new byte[4];
+                    lbl_sumMembers.Text = daTwo.GetValue(array[0]).ToString();
+                }
+                ccmTwo.Dispose();
+                daTwo.Close();
+
+                SqlCommand ccmThree = new SqlCommand("Select count(OID) from Orders", con);
+                SqlDataReader drThree = ccmThree.ExecuteReader();
+                while (drThree.Read())
+                {
+                    byte[] array = new byte[4];
+                    lbl_sumOrders.Text = drThree.GetValue(array[0]).ToString();
+                }
+                ccmThree.Dispose();
+                drThree.Close();
+
+                SqlCommand ccmFoure = new SqlCommand("select sum(price) from customProducts", con);
+                SqlDataReader drF = ccmFoure.ExecuteReader();
+                while (drF.Read())
+                {
+                    byte[] array = new byte[4];
+                    lbl_sumSales.Text = drF.GetValue(array[0]).ToString();
+                }
+                ccmFoure.Dispose();
+                drF.Close();
+
+                con.Close();
+            }
+            catch(Exception)
             {
-                byte[] array = new byte[4];
-                lbl_sumMembers.Text = daTwo.GetValue(array[0]).ToString();
+                this.Close();
+                mainMenu mm = new mainMenu();
+                mm.Show();
+                error404F err = new error404F();
+                err.Show();
             }
-            ccmTwo.Dispose();
-            daTwo.Close();
-
-            SqlCommand ccmThree = new SqlCommand("Select count(OID) from Orders", con);
-            SqlDataReader drThree = ccmThree.ExecuteReader();
-            while (drThree.Read())
-            {
-                byte[] array = new byte[4];
-                lbl_sumOrders.Text = drThree.GetValue(array[0]).ToString();
-            }
-            ccmThree.Dispose();
-            drThree.Close();
-
-            SqlCommand ccmFoure = new SqlCommand("select sum(price) from customProducts", con);
-            SqlDataReader drF = ccmFoure.ExecuteReader();
-            while (drF.Read())
-            {
-                byte[] array = new byte[4];
-                lbl_sumSales.Text = drF.GetValue(array[0]).ToString();
-            }
-            ccmFoure.Dispose();
-            drF.Close();
-
-            con.Close();
         }
     }
 }

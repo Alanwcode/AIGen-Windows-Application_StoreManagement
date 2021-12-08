@@ -44,10 +44,21 @@ namespace projectPrototypeTwo
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.lbl_todayDeals = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbl_sumSales = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbl_sumMembers = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbl_sumOrders = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -313,7 +324,7 @@ namespace projectPrototypeTwo
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(640, 60);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(197, 288);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
             this.guna2PictureBox1.Size = new System.Drawing.Size(164, 150);
@@ -322,25 +333,151 @@ namespace projectPrototypeTwo
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.UseTransparentBackground = true;
             // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.monthCalendar1.Location = new System.Drawing.Point(599, 276);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 7;
+            this.monthCalendar1.TitleBackColor = System.Drawing.Color.Transparent;
+            // 
+            // lbl_todayDeals
+            // 
+            this.lbl_todayDeals.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_todayDeals.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_todayDeals.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_todayDeals.Location = new System.Drawing.Point(370, 156);
+            this.lbl_todayDeals.Name = "lbl_todayDeals";
+            this.lbl_todayDeals.Size = new System.Drawing.Size(42, 22);
+            this.lbl_todayDeals.TabIndex = 11;
+            this.lbl_todayDeals.Text = "Data";
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(239, 156);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(111, 22);
+            this.guna2HtmlLabel4.TabIndex = 12;
+            this.guna2HtmlLabel4.Text = "Today Sales :";
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(239, 184);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(131, 22);
+            this.guna2HtmlLabel2.TabIndex = 12;
+            this.guna2HtmlLabel2.Text = "Total Members :";
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Red;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(241, 249);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(148, 22);
+            this.guna2HtmlLabel3.TabIndex = 12;
+            this.guna2HtmlLabel3.Text = "Total Sales Price :";
+            // 
+            // lbl_sumSales
+            // 
+            this.lbl_sumSales.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_sumSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_sumSales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_sumSales.Location = new System.Drawing.Point(414, 249);
+            this.lbl_sumSales.Name = "lbl_sumSales";
+            this.lbl_sumSales.Size = new System.Drawing.Size(42, 22);
+            this.lbl_sumSales.TabIndex = 11;
+            this.lbl_sumSales.Text = "Data";
+            // 
+            // lbl_sumMembers
+            // 
+            this.lbl_sumMembers.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_sumMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_sumMembers.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_sumMembers.Location = new System.Drawing.Point(386, 184);
+            this.lbl_sumMembers.Name = "lbl_sumMembers";
+            this.lbl_sumMembers.Size = new System.Drawing.Size(42, 22);
+            this.lbl_sumMembers.TabIndex = 11;
+            this.lbl_sumMembers.Text = "Data";
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(239, 212);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(103, 22);
+            this.guna2HtmlLabel5.TabIndex = 12;
+            this.guna2HtmlLabel5.Text = "Total Sales :";
+            // 
+            // lbl_sumOrders
+            // 
+            this.lbl_sumOrders.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_sumOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_sumOrders.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_sumOrders.Location = new System.Drawing.Point(360, 212);
+            this.lbl_sumOrders.Name = "lbl_sumOrders";
+            this.lbl_sumOrders.Size = new System.Drawing.Size(42, 22);
+            this.lbl_sumOrders.TabIndex = 11;
+            this.lbl_sumOrders.Text = "Data";
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(504, 28);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
+            this.guna2PictureBox3.Size = new System.Drawing.Size(423, 300);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 13;
+            this.guna2PictureBox3.TabStop = false;
+            this.guna2PictureBox3.UseTransparentBackground = true;
+            // 
             // adminDashboardHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(844, 450);
+            this.Controls.Add(this.guna2PictureBox3);
+            this.Controls.Add(this.lbl_sumSales);
+            this.Controls.Add(this.lbl_sumOrders);
+            this.Controls.Add(this.lbl_sumMembers);
+            this.Controls.Add(this.lbl_todayDeals);
+            this.Controls.Add(this.guna2HtmlLabel3);
+            this.Controls.Add(this.guna2HtmlLabel5);
+            this.Controls.Add(this.guna2HtmlLabel2);
+            this.Controls.Add(this.guna2HtmlLabel4);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.guna2Panel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "adminDashboardHome";
             this.Text = "Admin - Home";
+            this.Load += new System.EventHandler(this.adminDashboardHome_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -359,5 +496,15 @@ namespace projectPrototypeTwo
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2Button btn_mainMenu;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_todayDeals;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_sumSales;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_sumMembers;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_sumOrders;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
     }
 }

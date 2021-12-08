@@ -42,6 +42,7 @@ namespace projectPrototypeTwo
             {
                 logs.loginStatus = false;
                 btn_login.Text = "log in";
+                logs.newSessionADD();
             }
         }
 

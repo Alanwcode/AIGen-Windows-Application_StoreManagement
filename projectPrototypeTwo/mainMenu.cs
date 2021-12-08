@@ -20,10 +20,12 @@ namespace projectPrototypeTwo
             if (logs.loginStatus == true)
             {
                 btn_login.Text = "Log out";
+                btn_register.Visible = false;
             }
             else
             {
                 btn_login.Text = "Log in";
+                btn_register.Visible = true;
             }
         }
 
@@ -41,6 +43,7 @@ namespace projectPrototypeTwo
             else
             {
                 logs.loginStatus = false;
+                btn_register.Visible = true;
                 btn_login.Text = "log in";
                 logs.newSessionADD();
             }

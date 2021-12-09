@@ -51,14 +51,25 @@ namespace projectPrototypeTwo
 
         private void adminDashboardStocks_Load(object sender, EventArgs e)
         {
-            con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTech;Integrated Security=True");
+            try
+            {
+                con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTech;Integrated Security=True");
 
-            con.Open();
-            da = new SqlDataAdapter("select distinct * from customProducts;", con);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dgw_vProducts.DataSource = dt;
-            con.Close();
+                con.Open();
+                da = new SqlDataAdapter("select distinct * from customProducts;", con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgw_vProducts.DataSource = dt;
+                con.Close();
+            }
+            catch(Exception)
+            {
+                this.Close();
+                mainMenu mm = new mainMenu();
+                mm.Show();
+                error404F err = new error404F();
+                err.Show();
+            }
         }
     }
 }

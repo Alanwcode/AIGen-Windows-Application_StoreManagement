@@ -122,6 +122,7 @@
     <Compile Include="customOrder.Designer.cs">
       <DependentUpon>customOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="dbConnection.cs" />
     <Compile Include="error404F.cs">
       <SubType>Form</SubType>
     </Compile>

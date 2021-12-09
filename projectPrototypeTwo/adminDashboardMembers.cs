@@ -21,8 +21,6 @@ namespace projectPrototypeTwo
         SqlConnection con;
         SqlDataAdapter da;
 
-
-
         private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -53,25 +51,49 @@ namespace projectPrototypeTwo
 
         private void adminDashboardMembers_Load(object sender, EventArgs e)
         {
-            con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTech;Integrated Security=True");
+            try
+            {
+                con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTech;Integrated Security=True");
 
-            con.Open();
-            da = new SqlDataAdapter("Select NIC, cusName, email, tel from Customer", con);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dgw_Members.DataSource = dt;
-            con.Close();
+                con.Open();
+                da = new SqlDataAdapter("Select NIC, cusName, email, tel from Customer", con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgw_Members.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception)
+            {
+                this.Close();
+                mainMenu mm = new mainMenu();
+                mm.Show();
+                error404F err = new error404F();
+                err.Show();
+            }
+            
         }
+
         //Part not workin correctly
         private void btn_search_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTech;Integrated Security=True");
-            con.Open();
-            da = new SqlDataAdapter("Select NIC, cusName, email, tel from Customer where cusName like ('%"+txt_nameOrNic.Text+"%') or NIC like('% +" + txt_nameOrNic.Text + " + %')", con);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dgw_Members.DataSource = dt;
-            con.Close();
+            try
+            {
+                con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTech;Integrated Security=True");
+                con.Open();
+                da = new SqlDataAdapter("Select NIC, cusName, email, tel from Customer where cusName like ('%" + txt_nameOrNic.Text + "%') or NIC like('% +" + txt_nameOrNic.Text + " + %')", con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgw_Members.DataSource = dt;
+                con.Close();
+            }
+            catch(Exception)
+            {
+                this.Close();
+                mainMenu mm = new mainMenu();
+                mm.Show();
+                error404F err = new error404F();
+                err.Show();
+            }
         }
     }
 }

@@ -19,21 +19,30 @@ namespace projectPrototypeTwo
         public checkout(string pNum, double price)
         {
             InitializeComponent();
-            lbl_productNumber.Text = pNum.ToString();
-            lbl_price.Text = price.ToString();
-            logs.checkLoginStatus();
 
-            con.Open();
-            SqlCommand ccm = new SqlCommand("select NIC from Customer where username = '" + logs.loggedUserName + "'", con);
-            SqlDataReader dr = ccm.ExecuteReader();
-            
-            while (dr.Read())
+            try
             {
-                byte[] array = new byte[4];
-                txt_NIC.Text = dr.GetValue(array[0]).ToString();
+                lbl_productNumber.Text = pNum.ToString();
+                lbl_price.Text = price.ToString();
+                logs.checkLoginStatus();
+
+                con.Open();
+                SqlCommand ccm = new SqlCommand("select NIC from Customer where username = '" + logs.loggedUserName + "'", con);
+                SqlDataReader dr = ccm.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    byte[] array = new byte[4];
+                    txt_NIC.Text = dr.GetValue(array[0]).ToString();
+                }
+                con.Close();
+                ccm.Dispose();
             }
-            con.Close();
-            ccm.Dispose();
+            catch (Exception)
+            {
+                error404F err = new error404F();
+                err.Show();
+            }
         }
 
         Logins logs = new Logins();
@@ -41,30 +50,40 @@ namespace projectPrototypeTwo
         private void btn_payNow_Click(object sender, EventArgs e)
         {
             lbl_formValidation.Visible = false;
-
-            if (!Regex.IsMatch(txt_expDate.Text, @"^(0[1-9]|1[0-2])\/?(([0-9]{4}|[0-9]{2})$)"))
+            try
             {
-                lbl_formValidation.Text = "Card Expire date isn't valid";
-                lbl_formValidation.Visible = true;
-            }
-            else
-            {
-                
-                con.Open();
-                SqlCommand cmd = new SqlCommand("insert into Orders (cusNIC, PID, deliveryAddress) values ('"+txt_NIC.Text+"','"+lbl_productNumber.Text+"','"+txt_addressOne.Text +", "+ txt_addressTwo.Text + ", " + txt_city.Text +"')", con);
-                int i = cmd.ExecuteNonQuery();
-                if (i == 1)
+                if (!Regex.IsMatch(txt_expDate.Text, @"^(0[1-9]|1[0-2])\/?(([0-9]{4}|[0-9]{2})$)"))
                 {
-                    Sucess suc = new Sucess();
-                    suc.ShowDialog();
+                    lbl_formValidation.Text = "Card Expire date isn't valid";
+                    lbl_formValidation.Visible = true;
                 }
                 else
                 {
-                    error404F err = new error404F();
-                    err.ShowDialog();
+
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("insert into Orders (cusNIC, PID, deliveryAddress) values ('" + txt_NIC.Text + "','" + lbl_productNumber.Text + "','" + txt_addressOne.Text + ", " + txt_addressTwo.Text + ", " + txt_city.Text + "')", con);
+                    int i = cmd.ExecuteNonQuery();
+                    if (i == 1)
+                    {
+                        Sucess suc = new Sucess();
+                        suc.ShowDialog();
+                    }
+                    else
+                    {
+                        error404F err = new error404F();
+                        err.ShowDialog();
+                    }
+                    con.Close();
+                    cmd.Dispose();
                 }
-                con.Close();
-                cmd.Dispose();
+            }
+            catch(FormatException)
+            {
+                lbl_formValidation.Text = "Invalid Format!";
+            }
+            catch (Exception)
+            {
+                lbl_formValidation.Text = "Something went wrong please try again!";
             }
         }
 

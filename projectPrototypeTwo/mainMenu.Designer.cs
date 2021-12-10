@@ -184,12 +184,11 @@ namespace projectPrototypeTwo
             this.label1.AutoEllipsis = true;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(409, 180);
+            this.label1.Location = new System.Drawing.Point(409, 177);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(331, 45);
+            this.label1.Size = new System.Drawing.Size(335, 75);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Buy and upgrade a robot of your choice in any color you like.\r\n We will deliver t" +
-    "o your doorstep.Megatech will happily take \r\ncare of your life";
+            this.label1.Text = resources.GetString("label1.Text");
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // btn_login

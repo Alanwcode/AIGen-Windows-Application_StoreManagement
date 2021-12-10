@@ -31482,6 +31482,13 @@
         /wGpoEEFM9lxcAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>MegaTech is a Robotic manufacturing company in Sri lanka.
+You cann Buy and upgrade a robot of your choice in any 
+color you want. Your robot we will deliver to your doorstep.  
+Enjoy your life with Megatech. 
+We will happily take care of your life. </value>
+  </data>
   <metadata name="guna2DragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

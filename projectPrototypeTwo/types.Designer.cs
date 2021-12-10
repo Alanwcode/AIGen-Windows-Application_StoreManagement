@@ -267,11 +267,11 @@ namespace projectPrototypeTwo
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(310, 287);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(208, 180);
+            this.label5.Size = new System.Drawing.Size(208, 120);
             this.label5.TabIndex = 23;
-            this.label5.Text = "Model  :   Mayfield PB-E2\r\nColor  : White\r\nType  : \r\nIntergration : Siri\r\nRemote " +
-    "Access Range : 10m - 250m\r\nCamera Quality :  8MP\r\nVoltage ranges : 220-240V\r\nBat" +
-    "tery Life : 8 h - 20h\r\n\r\n\r\n\r\n\r\n";
+            this.label5.Text = "Model  :   Mayfield PB-E2\r\nColor  : White\r\nIntergration : Siri\r\nRemote Access Ran" +
+    "ge : 10m - 250m\r\nCamera Quality :  8MP\r\nVoltage ranges : 220-240V\r\nBattery Life " +
+    ": 8 h - 20h\r\n\r\n";
             this.label5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label7
@@ -280,9 +280,11 @@ namespace projectPrototypeTwo
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(827, 287);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(206, 210);
+            this.label7.Size = new System.Drawing.Size(206, 120);
             this.label7.TabIndex = 24;
-            this.label7.Text = resources.GetString("label7.Text");
+            this.label7.Text = "Model  :   Boston PB-E4\r\nColor  : White\r\nIntergration : Siri, Cortona, Alexa\r\nRem" +
+    "ote Access Range : WiFi Access\r\nCamera Quality :  12MP\r\nVoltage ranges : 220-240" +
+    "V\r\nBattery Life : 10h - 20h\r\n\r\n";
             this.label7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label1
@@ -291,11 +293,11 @@ namespace projectPrototypeTwo
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(577, 287);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 195);
+            this.label1.Size = new System.Drawing.Size(208, 120);
             this.label1.TabIndex = 24;
-            this.label1.Text = "Model  :   Aibo PB-E3\r\nColor  : White\r\nType  : \r\nIntergration : Siri, Cortona\r\nRe" +
-    "mote Access Range : 50m - 300m\r\nCamera Quality :  8MP\r\nVoltage ranges : 220-240V" +
-    "\r\nBattery Life : 8 h - 20h\r\n\r\n\r\n\r\n\r\n\r\n";
+            this.label1.Text = "Model  :   Aibo PB-E3\r\nColor  : White\r\nIntergration : Siri, Cortona\r\nRemote Acces" +
+    "s Range : 50m - 300m\r\nCamera Quality :  8MP\r\nVoltage ranges : 220-240V\r\nBattery " +
+    "Life : 8 h - 20h\r\n\r\n";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // label3
@@ -304,11 +306,11 @@ namespace projectPrototypeTwo
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(34, 287);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 165);
+            this.label3.Size = new System.Drawing.Size(208, 135);
             this.label3.TabIndex = 25;
-            this.label3.Text = "Model  :   Hanson PB-E1\r\nColor  : White\r\nType  : \r\nIntergration : None\r\nRemote Ac" +
-    "cess Range : 10m - 100m\r\nCamera Quality :  3MP\r\nVoltage ranges : 220-240V\r\nBatte" +
-    "ry Life : 5 h - 12h\r\n\r\n\r\n\r\n";
+            this.label3.Text = "Model  :   Hanson PB-E1\r\nColor  : White\r\nIntergration : None\r\nRemote Access Range" +
+    " : 10m - 100m\r\nCamera Quality :  3MP\r\nVoltage ranges : 220-240V\r\nBattery Life : " +
+    "5 h - 12h\r\n\r\n\r\n";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // btn_purchaseItemFoure

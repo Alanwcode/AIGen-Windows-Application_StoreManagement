@@ -15,6 +15,7 @@ namespace projectPrototypeTwo
     public partial class checkout : Form
     {
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTechV2;Integrated Security=True");
+        string NICNo = "";
 
         public checkout(string pNum, double price)
         {
@@ -34,6 +35,7 @@ namespace projectPrototypeTwo
                 {
                     byte[] array = new byte[4];
                     txt_NIC.Text = dr.GetValue(array[0]).ToString();
+                    NICNo = dr.GetValue(array[0]).ToString();
                 }
                 con.Close();
                 ccm.Dispose();
@@ -49,12 +51,106 @@ namespace projectPrototypeTwo
 
         private void btn_payNow_Click(object sender, EventArgs e)
         {
+            int cCount = 0;
+
             lbl_formValidation.Visible = false;
+            txt_expDate.BorderColor = Color.DarkGray;
+            txt_addressOne.BorderColor = Color.DarkGray;
+            txt_addressTwo.BorderColor = Color.DarkGray;
+            txt_cardVal.BorderColor = Color.DarkGray;
+            txt_city.BorderColor = Color.DarkGray;
+            txt_cvv.BorderColor = Color.DarkGray;
+            txt_NIC.BorderColor = Color.DarkGray;
+            txt_zipCode.BorderColor = Color.DarkGray;
+
+            if (!Regex.IsMatch(txt_expDate.Text, @"^(0[1-9]|1[0-2])\/?(([0-9]{4}|[0-9]{2})$)"))
+            {
+                lbl_formValidation.Text = "Card Expire date isn't valid";
+                lbl_formValidation.Visible = true;
+                txt_expDate.BorderColor = Color.Red;
+            }
+            else
+            {
+                cCount = cCount + 1;
+            }
+
+
+            if (String.IsNullOrEmpty(txt_NIC.Text))
+            {
+                txt_NIC.BorderColor = Color.Red;
+            }
+            else if (NICNo != txt_NIC.Text)
+            {
+                txt_NIC.BorderColor = Color.Red;
+            }
+            else
+            {
+                cCount = cCount + 1;
+            }
+
+
+            if (String.IsNullOrEmpty(txt_addressOne.Text))
+            {
+                txt_addressOne.BorderColor = Color.Red;
+            }
+            else
+            {
+                cCount = cCount + 1;
+            }
+
+
+            if (String.IsNullOrEmpty(txt_cardVal.Text))
+            {
+                txt_cardVal.BorderColor = Color.Red;
+            }
+            else
+            {
+                cCount = cCount + 1;
+            }
+
+
+            if (String.IsNullOrEmpty(txt_city.Text))
+            {
+                txt_city.BorderColor = Color.Red;
+            }
+            else
+            {
+                cCount = cCount + 1;
+            }
+
+
+            if (String.IsNullOrEmpty(txt_cvv.Text))
+            {
+                txt_cvv.BorderColor = Color.Red;
+            }
+            else if(txt_cvv.Text.Length != 3)
+            {
+                txt_cvv.BorderColor = Color.Red;
+            }
+            else
+            {
+                cCount = cCount + 1;
+            }
+
+
+            if (String.IsNullOrEmpty(txt_zipCode.Text))
+            {
+                txt_zipCode.BorderColor = Color.Red;
+            }
+            else
+            {
+                cCount = cCount + 1;
+            }
+
+            //cardValidate cVal = new cardValidate();
+            //int val = cVal.IsCreditCardInfoValid(txt_cardVal.Text, txt_expDate.Text, txt_cvv.Text);
+
+
             try
             {
-                if (!Regex.IsMatch(txt_expDate.Text, @"^(0[1-9]|1[0-2])\/?(([0-9]{4}|[0-9]{2})$)"))
+                if (cCount != 7)
                 {
-                    lbl_formValidation.Text = "Card Expire date isn't valid";
+                    lbl_formValidation.Text = "Some Feild/s are Invalid, Please check again!";
                     lbl_formValidation.Visible = true;
                 }
                 else

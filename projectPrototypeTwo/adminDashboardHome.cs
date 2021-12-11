@@ -55,13 +55,11 @@ namespace projectPrototypeTwo
                 con.Open();
                 SqlCommand ccm = new SqlCommand("select count(OID) from orders where oDate = getdate()", con);
                 SqlDataReader dr = ccm.ExecuteReader();
-                string tDeals = "";
                 while (dr.Read())
                 {
                     byte[] array = new byte[4];
-                    tDeals = dr.GetValue(array[0]).ToString();
+                    lbl_todayDeals.Text = dr.GetValue(array[0]).ToString();
                 }
-                lbl_todayDeals.Text = tDeals;
                 ccm.Dispose();
                 dr.Close();
 

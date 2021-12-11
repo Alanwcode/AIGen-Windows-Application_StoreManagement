@@ -116,6 +116,7 @@
     <Compile Include="adminDashboardStocks.Designer.cs">
       <DependentUpon>adminDashboardStocks.cs</DependentUpon>
     </Compile>
+    <Compile Include="cardValidate.cs" />
     <Compile Include="checkout.cs">
       <SubType>Form</SubType>
     </Compile>

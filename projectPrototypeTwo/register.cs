@@ -82,6 +82,7 @@ namespace projectPrototypeTwo
             {
                 lbl_valName.Text = "Feild can't be null";
                 lbl_valName.Visible = true;
+
             }
             else
             {

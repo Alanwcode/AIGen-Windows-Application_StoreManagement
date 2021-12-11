@@ -40,7 +40,7 @@ namespace projectPrototypeTwo
 
             lbl_val_invalid.Visible = false;
 
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTech;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTechV2;Integrated Security=True");
             con.Open();
             SqlDataAdapter da = new SqlDataAdapter("select count(*) from adminLogin where username = '" + txt_username.Text + "' and passUser = '" + txt_password.Text + "'", con);
             DataTable dt = new DataTable();
@@ -55,7 +55,7 @@ namespace projectPrototypeTwo
             }
             else
             {
-                SqlDataAdapter daUL = new SqlDataAdapter("select count(*) from Customer where username = '" + txt_username.Text + "' and cusPassword = '" + txt_password.Text + "'", con);
+                SqlDataAdapter daUL = new SqlDataAdapter("select count(*) from customerLogin where username = '" + txt_username.Text + "' and cusPassword = '" + txt_password.Text + "'", con);
                 DataTable dtUL = new DataTable();
                 daUL.Fill(dtUL);
 

@@ -53,10 +53,10 @@ namespace projectPrototypeTwo
         {
             try
             {
-                con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTech;Integrated Security=True");
+                con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTechV2;Integrated Security=True");
 
                 con.Open();
-                da = new SqlDataAdapter("Select NIC, cusName, email, tel from Customer", con);
+                da = new SqlDataAdapter("Select NIC, cusName, email, tel from customer", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgw_Members.DataSource = dt;
@@ -78,9 +78,9 @@ namespace projectPrototypeTwo
         {
             try
             {
-                con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTech;Integrated Security=True");
+                con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTechV2;Integrated Security=True");
                 con.Open();
-                da = new SqlDataAdapter("Select NIC, cusName, email, tel from Customer where cusName like ('%" + txt_nameOrNic.Text + "%') or NIC like('% +" + txt_nameOrNic.Text + " + %')", con);
+                da = new SqlDataAdapter("Select NIC, cusName, email, tel from Customer where cusName like ('%" +(txt_nameOrNic.Text).ToString()+ "%') or NIC like('% +" +(txt_nameOrNic.Text).ToString()+ " + %')", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgw_Members.DataSource = dt;

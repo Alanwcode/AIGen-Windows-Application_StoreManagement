@@ -53,16 +53,38 @@ namespace projectPrototypeTwo
         {
             try
             {
-                con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTech;Integrated Security=True");
+                con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTechV2;Integrated Security=True");
 
                 con.Open();
-                da = new SqlDataAdapter("Select * from Orders", con);
+                da = new SqlDataAdapter("Select * from orders", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgw_Orders.DataSource = dt;
                 con.Close();
             }
             catch(Exception)
+            {
+                this.Close();
+                mainMenu mm = new mainMenu();
+                mm.Show();
+                error404F err = new error404F();
+                err.Show();
+            }
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTechV2;Integrated Security=True");
+                con.Open();
+                da = new SqlDataAdapter("Select orders.* from orders, customer where orders.cusNIC = customer.NIC and customer.cusName like ('%" + (txt_nameOrNic.Text).ToString() + "%') or customer.NIC like('% +" + (txt_nameOrNic.Text).ToString() + " + %')", con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgw_Orders.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception)
             {
                 this.Close();
                 mainMenu mm = new mainMenu();

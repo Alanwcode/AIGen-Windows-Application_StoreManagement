@@ -202,11 +202,16 @@ namespace projectPrototypeTwo
 
             if(count == 8)
             {
-                SqlConnection con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTech;Integrated Security=True");
+                SqlConnection con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTechV2;Integrated Security=True");
                 con.Open();
-                SqlCommand cmd = new SqlCommand("insert into Customer values('"+ Convert.ToString(txt_NIC.Text) +"', '"+ Convert.ToString(txt_name.Text) +"', '"+ Convert.ToString(txt_address.Text) +"', '"+ Convert.ToString(txt_email.Text) +"', '"+ Convert.ToString(txt_telephone.Text) + "', '"+ Convert.ToString(txt_username.Text) +"', '"+ Convert.ToString(txt_password.Text) +"')", con);
+                SqlCommand cmd = new SqlCommand("insert into customer values('"+ Convert.ToString(txt_NIC.Text) +"', '"+ Convert.ToString(txt_name.Text) +"', '"+ Convert.ToString(txt_address.Text) +"', '"+ Convert.ToString(txt_email.Text) +"', '"+ Convert.ToString(txt_telephone.Text) + "')", con);
                 int i = cmd.ExecuteNonQuery();
-                if (i == 1)
+               
+                cmd.Dispose();
+                SqlCommand cmdTwo = new SqlCommand("insert into customerLogin values('" + Convert.ToString(txt_username.Text) + "', '" + Convert.ToString(txt_password.Text) + "', '" + Convert.ToString(txt_NIC.Text) + "')", con);
+                int ii = cmdTwo.ExecuteNonQuery();
+
+                if (i == 1 && ii == 1)
                 {
                     Sucess suc = new Sucess();
                     suc.ShowDialog();
@@ -216,8 +221,9 @@ namespace projectPrototypeTwo
                     error404F err = new error404F();
                     err.ShowDialog();
                 }
+
+                cmdTwo.Dispose();
                 con.Close();
-                cmd.Dispose();
             }
             else
             {

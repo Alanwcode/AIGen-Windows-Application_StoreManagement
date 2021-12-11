@@ -9,7 +9,8 @@ namespace projectPrototypeTwo
 {
     class dbConnection
     {
-        string connectionString = "Server=tcp:server-nibm-rar.database.windows.net,1433;Initial Catalog=dbMegaTech;Persist Security Info=False;User ID=ramesh_rukshan;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        string connectionString = "Data Source=DESKTOP-9PI6981;Integrated Security=True";
+           // "Server=tcp:server-nibm-rar.database.windows.net,1433;Initial Catalog=dbMegaTech;Persist Security Info=False;User ID=ramesh_rukshan;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         private SqlConnection con;
         private SqlCommand cmd;
         private SqlDataAdapter da;

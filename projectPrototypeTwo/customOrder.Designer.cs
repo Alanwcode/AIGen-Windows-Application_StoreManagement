@@ -64,6 +64,9 @@ namespace projectPrototypeTwo
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_totalPrice = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.cmbx_type = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btn_applyType = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_white)).BeginInit();
@@ -185,6 +188,8 @@ namespace projectPrototypeTwo
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.BorderColor = System.Drawing.Color.Silver;
             this.guna2Panel2.BorderThickness = 2;
+            this.guna2Panel2.Controls.Add(this.btn_applyType);
+            this.guna2Panel2.Controls.Add(this.cmbx_type);
             this.guna2Panel2.Controls.Add(this.btn_clear);
             this.guna2Panel2.Controls.Add(this.btn_intergrate);
             this.guna2Panel2.Controls.Add(this.guna2Button1);
@@ -198,6 +203,7 @@ namespace projectPrototypeTwo
             this.guna2Panel2.Controls.Add(this.rad_blue);
             this.guna2Panel2.Controls.Add(this.rad_red);
             this.guna2Panel2.Controls.Add(this.rad_white);
+            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel6);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel8);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel7);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel3);
@@ -258,7 +264,7 @@ namespace projectPrototypeTwo
             this.btn_intergrate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_intergrate.ForeColor = System.Drawing.Color.White;
             this.btn_intergrate.HoverState.Parent = this.btn_intergrate;
-            this.btn_intergrate.Location = new System.Drawing.Point(232, 217);
+            this.btn_intergrate.Location = new System.Drawing.Point(232, 205);
             this.btn_intergrate.Name = "btn_intergrate";
             this.btn_intergrate.ShadowDecoration.Parent = this.btn_intergrate;
             this.btn_intergrate.Size = new System.Drawing.Size(224, 28);
@@ -372,7 +378,7 @@ namespace projectPrototypeTwo
             "Siri (400 USD)",
             "Cortona (150 USD)"});
             this.cmbx_intergration.ItemsAppearance.Parent = this.cmbx_intergration;
-            this.cmbx_intergration.Location = new System.Drawing.Point(232, 175);
+            this.cmbx_intergration.Location = new System.Drawing.Point(232, 160);
             this.cmbx_intergration.Name = "cmbx_intergration";
             this.cmbx_intergration.ShadowDecoration.Parent = this.cmbx_intergration;
             this.cmbx_intergration.Size = new System.Drawing.Size(225, 36);
@@ -509,7 +515,7 @@ namespace projectPrototypeTwo
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(296, 148);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(296, 136);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(87, 22);
             this.guna2HtmlLabel8.TabIndex = 0;
@@ -639,6 +645,67 @@ namespace projectPrototypeTwo
             this.guna2DragControl1.TargetControl = this.guna2Panel1;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
+            // cmbx_type
+            // 
+            this.cmbx_type.AutoRoundedCorners = true;
+            this.cmbx_type.BackColor = System.Drawing.Color.Transparent;
+            this.cmbx_type.BorderRadius = 17;
+            this.cmbx_type.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbx_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbx_type.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbx_type.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbx_type.FocusedState.Parent = this.cmbx_type;
+            this.cmbx_type.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbx_type.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbx_type.HoverState.Parent = this.cmbx_type;
+            this.cmbx_type.ItemHeight = 30;
+            this.cmbx_type.Items.AddRange(new object[] {
+            "None | (Default)",
+            "Industrial Floor Scrubbers | (500 USD)",
+            "Agricultural | (360 USD)",
+            "Multi Functional | (1200 USD)"});
+            this.cmbx_type.ItemsAppearance.Parent = this.cmbx_type;
+            this.cmbx_type.Location = new System.Drawing.Point(232, 270);
+            this.cmbx_type.Name = "cmbx_type";
+            this.cmbx_type.ShadowDecoration.Parent = this.cmbx_type;
+            this.cmbx_type.Size = new System.Drawing.Size(224, 36);
+            this.cmbx_type.TabIndex = 11;
+            // 
+            // guna2HtmlLabel6
+            // 
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(327, 245);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(37, 22);
+            this.guna2HtmlLabel6.TabIndex = 0;
+            this.guna2HtmlLabel6.Text = "TYPE";
+            // 
+            // btn_applyType
+            // 
+            this.btn_applyType.Animated = true;
+            this.btn_applyType.AutoRoundedCorners = true;
+            this.btn_applyType.BorderRadius = 12;
+            this.btn_applyType.CheckedState.Parent = this.btn_applyType;
+            this.btn_applyType.CustomImages.Parent = this.btn_applyType;
+            this.btn_applyType.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_applyType.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_applyType.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_applyType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_applyType.DisabledState.Parent = this.btn_applyType;
+            this.btn_applyType.FillColor = System.Drawing.Color.Gray;
+            this.btn_applyType.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_applyType.ForeColor = System.Drawing.Color.White;
+            this.btn_applyType.HoverState.Parent = this.btn_applyType;
+            this.btn_applyType.Location = new System.Drawing.Point(232, 312);
+            this.btn_applyType.Name = "btn_applyType";
+            this.btn_applyType.ShadowDecoration.Parent = this.btn_applyType;
+            this.btn_applyType.Size = new System.Drawing.Size(224, 26);
+            this.btn_applyType.TabIndex = 12;
+            this.btn_applyType.Text = "Apply Type";
+            this.btn_applyType.UseTransparentBackground = true;
+            this.btn_applyType.Click += new System.EventHandler(this.btn_applyType_Click);
+            // 
             // customOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -711,5 +778,8 @@ namespace projectPrototypeTwo
         private Guna.UI2.WinForms.Guna2Button btn_intergrate;
         private Guna.UI2.WinForms.Guna2Button btn_clear;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2Button btn_applyType;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbx_type;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
     }
 }

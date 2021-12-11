@@ -53,10 +53,10 @@ namespace projectPrototypeTwo
         {
             try
             {
-                con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTech;Integrated Security=True");
+                con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTechV2;Integrated Security=True");
 
                 con.Open();
-                da = new SqlDataAdapter("select distinct * from customProducts;", con);
+                da = new SqlDataAdapter("select distinct * from products;", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgw_vProducts.DataSource = dt;

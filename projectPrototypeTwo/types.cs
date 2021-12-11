@@ -50,25 +50,25 @@ namespace projectPrototypeTwo
 
         private void btn_purchaseItemOne_Click(object sender, EventArgs e)
         {
-            checkout ch = new checkout("1119",2360);
+            checkout ch = new checkout("1111",2360);
             ch.ShowDialog();
         }
 
         private void btn_purchaseItemTwo_Click(object sender, EventArgs e)
         {
-            checkout ch = new checkout("1120", 3600);
+            checkout ch = new checkout("1112", 3600);
             ch.ShowDialog();
         }
 
         private void btn_purchaseItemThree_Click(object sender, EventArgs e)
         {
-            checkout ch = new checkout("1121", 3999);
+            checkout ch = new checkout("1113", 3999);
             ch.ShowDialog();
         }
 
         private void btn_purchaseItemFoure_Click(object sender, EventArgs e)
         {
-            checkout ch = new checkout("1122",5399);
+            checkout ch = new checkout("1114",5399);
             ch.ShowDialog();
         }
     }

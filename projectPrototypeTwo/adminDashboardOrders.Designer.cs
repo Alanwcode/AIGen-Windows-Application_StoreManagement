@@ -362,6 +362,7 @@ namespace projectPrototypeTwo
             this.btn_search.Size = new System.Drawing.Size(148, 39);
             this.btn_search.TabIndex = 13;
             this.btn_search.Text = "Search";
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // dgw_Orders
             // 

@@ -18,7 +18,7 @@ namespace projectPrototypeTwo
             InitializeComponent();
         }
 
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTech;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTechV2;Integrated Security=True");
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
@@ -53,7 +53,7 @@ namespace projectPrototypeTwo
             try
             {
                 con.Open();
-                SqlCommand ccm = new SqlCommand("select count(OID) from Orders where oDate = getdate()", con);
+                SqlCommand ccm = new SqlCommand("select count(OID) from orders where oDate = getdate()", con);
                 SqlDataReader dr = ccm.ExecuteReader();
                 string tDeals = "";
                 while (dr.Read())
@@ -65,7 +65,7 @@ namespace projectPrototypeTwo
                 ccm.Dispose();
                 dr.Close();
 
-                SqlCommand ccmTwo = new SqlCommand("select count(NIC) from Customer", con);
+                SqlCommand ccmTwo = new SqlCommand("select count(NIC) from customer", con);
                 SqlDataReader daTwo = ccmTwo.ExecuteReader();
                 while (daTwo.Read())
                 {
@@ -75,7 +75,7 @@ namespace projectPrototypeTwo
                 ccmTwo.Dispose();
                 daTwo.Close();
 
-                SqlCommand ccmThree = new SqlCommand("Select count(OID) from Orders", con);
+                SqlCommand ccmThree = new SqlCommand("Select count(OID) from orders", con);
                 SqlDataReader drThree = ccmThree.ExecuteReader();
                 while (drThree.Read())
                 {
@@ -85,7 +85,7 @@ namespace projectPrototypeTwo
                 ccmThree.Dispose();
                 drThree.Close();
 
-                SqlCommand ccmFoure = new SqlCommand("select sum(price) from customProducts", con);
+                SqlCommand ccmFoure = new SqlCommand("select sum(price) from products", con);
                 SqlDataReader drF = ccmFoure.ExecuteReader();
                 while (drF.Read())
                 {

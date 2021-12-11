@@ -347,7 +347,7 @@ namespace projectPrototypeTwo
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgw_Members.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgw_Members.EnableHeadersVisualStyles = false;
-            this.dgw_Members.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgw_Members.GridColor = System.Drawing.Color.Silver;
             this.dgw_Members.Location = new System.Drawing.Point(213, 125);
             this.dgw_Members.Name = "dgw_Members";
             this.dgw_Members.RowHeadersVisible = false;
@@ -360,7 +360,7 @@ namespace projectPrototypeTwo
             this.dgw_Members.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgw_Members.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.dgw_Members.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgw_Members.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgw_Members.ThemeStyle.GridColor = System.Drawing.Color.Silver;
             this.dgw_Members.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dgw_Members.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgw_Members.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);

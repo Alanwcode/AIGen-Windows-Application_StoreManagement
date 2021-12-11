@@ -183,42 +183,54 @@ namespace projectPrototypeTwo
 
         private void btn_purchase_Click(object sender, EventArgs e)
         {
-            
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTechV2;Integrated Security=True");
-            con.Open();
-            SqlCommand cmd = new SqlCommand("insert into products (color, camQuality, intergration, remoteAccess, voiceControl, price, rType) values (@a, @b, @c, @d, @e, @f, @g)", con);
-            cmd.Parameters.AddWithValue("a", color.ToString());
-            cmd.Parameters.AddWithValue("b", camQualityCh);
-            cmd.Parameters.AddWithValue("c", intergration);
-            cmd.Parameters.AddWithValue("d", remoteAccessCh);
-            cmd.Parameters.AddWithValue("e", voiceControlCh);
-            cmd.Parameters.AddWithValue("f", price);
-            cmd.Parameters.AddWithValue("g", typeS);
-
-            int i = cmd.ExecuteNonQuery();
-            if (i == 1)
+            try
             {
-                SqlCommand ccm = new SqlCommand("select prodNumber from products where price = '"+price+"'", con);
-                SqlDataReader dr = ccm.ExecuteReader();
-                string prodNum = "";
-                while (dr.Read())
+                SqlConnection con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTechV2;Integrated Security=True");
+                con.Open();
+                SqlCommand cmd = new SqlCommand("insert into products (color, camQuality, intergration, remoteAccess, voiceControl, price, rType) values (@a, @b, @c, @d, @e, @f, @g)", con);
+                cmd.Parameters.AddWithValue("a", color.ToString());
+                cmd.Parameters.AddWithValue("b", camQualityCh);
+                cmd.Parameters.AddWithValue("c", intergration);
+                cmd.Parameters.AddWithValue("d", remoteAccessCh);
+                cmd.Parameters.AddWithValue("e", voiceControlCh);
+                cmd.Parameters.AddWithValue("f", price);
+                cmd.Parameters.AddWithValue("g", typeS);
+
+                int i = cmd.ExecuteNonQuery();
+                if (i == 1)
                 {
-                    byte[] array = new byte[4];
-                    prodNum = dr.GetValue(array[0]).ToString();
+                    SqlCommand ccm = new SqlCommand("select prodNumber from products where price = '" + price + "'", con);
+                    SqlDataReader dr = ccm.ExecuteReader();
+                    string prodNum = "";
+                    while (dr.Read())
+                    {
+                        byte[] array = new byte[4];
+                        prodNum = dr.GetValue(array[0]).ToString();
+                    }
+                    //string prodNum = dr["prodNumber"].ToString();
+                    checkout ch = new checkout(prodNum, price);
+                    ch.Show();
+                    //this.Hide();
                 }
-                //string prodNum = dr["prodNumber"].ToString();
-                checkout ch = new checkout(prodNum, price);
-                ch.Show();
-                //this.Hide();
+                else
+                {
+                    error404F err = new error404F();
+                    err.ShowDialog();
+                }
+
+                con.Close();
+                cmd.Dispose();
             }
-            else
+            catch (SqlException)
             {
                 error404F err = new error404F();
                 err.ShowDialog();
             }
-
-            con.Close();
-            cmd.Dispose();
+            catch (Exception)
+            {
+                messageBox mbx = new messageBox();
+                mbx.ShowDialog();
+            }
         }
 
         private void btn_clear_Click_1(object sender, EventArgs e)

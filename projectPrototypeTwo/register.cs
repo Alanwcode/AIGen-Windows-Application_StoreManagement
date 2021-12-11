@@ -198,38 +198,50 @@ namespace projectPrototypeTwo
                 }
             }
 
-            
-
-            if(count == 8)
+            try
             {
-                SqlConnection con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTechV2;Integrated Security=True");
-                con.Open();
-                SqlCommand cmd = new SqlCommand("insert into customer values('"+ Convert.ToString(txt_NIC.Text) +"', '"+ Convert.ToString(txt_name.Text) +"', '"+ Convert.ToString(txt_address.Text) +"', '"+ Convert.ToString(txt_email.Text) +"', '"+ Convert.ToString(txt_telephone.Text) + "')", con);
-                int i = cmd.ExecuteNonQuery();
-               
-                cmd.Dispose();
-                SqlCommand cmdTwo = new SqlCommand("insert into customerLogin values('" + Convert.ToString(txt_username.Text) + "', '" + Convert.ToString(txt_password.Text) + "', '" + Convert.ToString(txt_NIC.Text) + "')", con);
-                int ii = cmdTwo.ExecuteNonQuery();
-
-                if (i == 1 && ii == 1)
+                if (count == 8)
                 {
-                    Sucess suc = new Sucess();
-                    suc.ShowDialog();
+                    SqlConnection con = new SqlConnection("Data Source=DESKTOP-9PI6981;Initial Catalog=MegaTechV2;Integrated Security=True");
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("insert into customer values('" + Convert.ToString(txt_NIC.Text) + "', '" + Convert.ToString(txt_name.Text) + "', '" + Convert.ToString(txt_address.Text) + "', '" + Convert.ToString(txt_email.Text) + "', '" + Convert.ToString(txt_telephone.Text) + "')", con);
+                    int i = cmd.ExecuteNonQuery();
+
+                    cmd.Dispose();
+                    SqlCommand cmdTwo = new SqlCommand("insert into customerLogin values('" + Convert.ToString(txt_username.Text) + "', '" + Convert.ToString(txt_password.Text) + "', '" + Convert.ToString(txt_NIC.Text) + "')", con);
+                    int ii = cmdTwo.ExecuteNonQuery();
+
+                    if (i == 1 && ii == 1)
+                    {
+                        Sucess suc = new Sucess();
+                        suc.ShowDialog();
+                    }
+                    else
+                    {
+                        error404F err = new error404F();
+                        err.ShowDialog();
+                    }
+
+                    cmdTwo.Dispose();
+                    con.Close();
                 }
                 else
                 {
-                    error404F err = new error404F();
-                    err.ShowDialog();
+                    pbx_searchRobotGIF.Visible = true;
+                    pbx_sitRobot.Visible = false;
                 }
-
-                cmdTwo.Dispose();
-                con.Close();
             }
-            else
+            catch (SqlException)
             {
-                pbx_searchRobotGIF.Visible = true;
-                pbx_sitRobot.Visible = false;
+                error404F err = new error404F();
+                err.ShowDialog();
             }
+            catch (Exception)
+            {
+                messageBox mbx = new messageBox();
+                mbx.ShowDialog();
+            }
+            
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)

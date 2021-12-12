@@ -1,4 +1,4 @@
-# AIGen-Windows-Application_StoreManagement
+# MegaTech-Windows-Application_StoreManagement
 StoreManagement Windows application with C# .NET framework. Guna Nuget Package used. Created for univercity CourceWork Project.
 <p dir="ltr" style="line-height:1.38;text-align: center;margin-top:0pt;margin-bottom:0pt;"><span style="font-size:16pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">MegaTech Windows Application&nbsp;</span></p>
 <p dir="ltr" style="line-height:1.38;text-align: center;margin-top:0pt;margin-bottom:0pt;"><span style="font-size:16pt;font-family:Arial;color:#999999;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">Documentation</span></p>

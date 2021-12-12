@@ -67,7 +67,7 @@ namespace projectPrototypeTwo
                         lg.saveUsername(txt_username.Text);
                         lg.updateLoginStatus(true);
                         Sucess su = new Sucess();
-                        su.Show();
+                        su.ShowDialog();
                     }
                     else
                     {

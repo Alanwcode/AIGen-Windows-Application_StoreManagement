@@ -71,7 +71,6 @@ namespace projectPrototypeTwo
         {
             types tEI = new types();
             tEI.Show();
-            this.Hide();
         }
 
         private void btn_privacyPolicy_Click(object sender, EventArgs e)

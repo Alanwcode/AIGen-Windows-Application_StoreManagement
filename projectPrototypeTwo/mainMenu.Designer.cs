@@ -41,7 +41,7 @@ namespace projectPrototypeTwo
             this.btn_existingOrder = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_login = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_home = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_About = new Guna.UI2.WinForms.Guna2Button();
             this.btn_contactUs = new Guna.UI2.WinForms.Guna2Button();
             this.btn_privacyPolicy = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -217,29 +217,30 @@ namespace projectPrototypeTwo
             this.btn_login.UseTransparentBackground = true;
             this.btn_login.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
-            // btn_home
+            // btn_About
             // 
-            this.btn_home.Animated = true;
-            this.btn_home.BackColor = System.Drawing.Color.Transparent;
-            this.btn_home.CheckedState.Parent = this.btn_home;
-            this.btn_home.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_home.CustomImages.Parent = this.btn_home;
-            this.btn_home.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_home.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_home.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_home.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_home.DisabledState.Parent = this.btn_home;
-            this.btn_home.FillColor = System.Drawing.Color.Transparent;
-            this.btn_home.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btn_home.ForeColor = System.Drawing.Color.Black;
-            this.btn_home.HoverState.Parent = this.btn_home;
-            this.btn_home.Location = new System.Drawing.Point(45, 463);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.ShadowDecoration.Parent = this.btn_home;
-            this.btn_home.Size = new System.Drawing.Size(73, 29);
-            this.btn_home.TabIndex = 6;
-            this.btn_home.Text = "Home";
-            this.btn_home.UseTransparentBackground = true;
+            this.btn_About.Animated = true;
+            this.btn_About.BackColor = System.Drawing.Color.Transparent;
+            this.btn_About.CheckedState.Parent = this.btn_About;
+            this.btn_About.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_About.CustomImages.Parent = this.btn_About;
+            this.btn_About.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_About.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_About.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_About.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_About.DisabledState.Parent = this.btn_About;
+            this.btn_About.FillColor = System.Drawing.Color.Transparent;
+            this.btn_About.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btn_About.ForeColor = System.Drawing.Color.Black;
+            this.btn_About.HoverState.Parent = this.btn_About;
+            this.btn_About.Location = new System.Drawing.Point(45, 463);
+            this.btn_About.Name = "btn_About";
+            this.btn_About.ShadowDecoration.Parent = this.btn_About;
+            this.btn_About.Size = new System.Drawing.Size(73, 29);
+            this.btn_About.TabIndex = 6;
+            this.btn_About.Text = "About";
+            this.btn_About.UseTransparentBackground = true;
+            this.btn_About.Click += new System.EventHandler(this.btn_About_Click);
             // 
             // btn_contactUs
             // 
@@ -304,6 +305,7 @@ namespace projectPrototypeTwo
             this.btn_register.BackColor = System.Drawing.Color.Transparent;
             this.btn_register.BorderRadius = 12;
             this.btn_register.CheckedState.Parent = this.btn_register;
+            this.btn_register.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_register.CustomImages.Parent = this.btn_register;
             this.btn_register.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_register.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -332,7 +334,7 @@ namespace projectPrototypeTwo
             this.Controls.Add(this.btn_register);
             this.Controls.Add(this.btn_privacyPolicy);
             this.Controls.Add(this.btn_contactUs);
-            this.Controls.Add(this.btn_home);
+            this.Controls.Add(this.btn_About);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_existingOrder);
@@ -367,7 +369,7 @@ namespace projectPrototypeTwo
         private Guna.UI2.WinForms.Guna2Button btn_existingOrder;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btn_login;
-        private Guna.UI2.WinForms.Guna2Button btn_home;
+        private Guna.UI2.WinForms.Guna2Button btn_About;
         private Guna.UI2.WinForms.Guna2Button btn_contactUs;
         private Guna.UI2.WinForms.Guna2Button btn_privacyPolicy;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;

@@ -19,12 +19,23 @@ namespace projectPrototypeTwo
             logs.checkLoginStatus();
             if (logs.loginStatus == true)
             {
-                btn_login.Text = "Log out";
-                btn_register.Visible = false;
+                logs.isAdminUserCheck();
+                if (logs.isAdminUser == true)
+                {
+                    btn_login.Text = "Log out";
+                    btn_register.Visible = false;
+                }
+                else
+                {
+                    btn_login.Text = "Log out";
+                    btn_register.Text = "Profile";
+                }
             }
             else
             {
                 btn_login.Text = "Log in";
+                btn_register.Text = "Register";
+
                 btn_register.Visible = true;
             }
         }
@@ -44,6 +55,7 @@ namespace projectPrototypeTwo
             {
                 logs.loginStatus = false;
                 btn_register.Visible = true;
+                btn_register.Text = "Register";
                 btn_login.Text = "log in";
                 logs.newSessionADD();
             }
@@ -86,8 +98,23 @@ namespace projectPrototypeTwo
 
         private void btn_register_Click(object sender, EventArgs e)
         {
-            register reg = new register();
-            reg.ShowDialog();
+            logs.checkLoginStatus();
+            if (logs.loginStatus == false)
+            {
+                register reg = new register();
+                reg.ShowDialog();
+            }
+            else
+            {
+                profile prof = new profile();
+                prof.Show();
+            }
+        }
+
+        private void btn_About_Click(object sender, EventArgs e)
+        {
+            aboutA about = new aboutA();
+            about.ShowDialog();
         }
     }
 }

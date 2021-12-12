@@ -175,6 +175,11 @@ namespace projectPrototypeTwo
                 lbl_valPassword.Text = "Feild can't be null";
                 lbl_valPassword.Visible = true;
             }
+            else if (txt_password.Text.Length != 8)
+            {
+                lbl_valPassword.Text = "maximum length is 8";
+                lbl_valPassword.Visible = true;
+            }
             else
             {
                 count = count + 1;
@@ -184,6 +189,11 @@ namespace projectPrototypeTwo
             if (string.IsNullOrEmpty(txt_confirmPassword.Text))
             {
                 lbl_valConfirmPassword.Text = "Feild can't be null";
+                lbl_valConfirmPassword.Visible = true;
+            }
+            else if (txt_confirmPassword.Text.Length != 8)
+            {
+                lbl_valConfirmPassword.Text = "maximum length is 8";
                 lbl_valConfirmPassword.Visible = true;
             }
             else

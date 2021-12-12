@@ -9,7 +9,7 @@ namespace projectPrototypeTwo
 {
     class Logins
     {
-        public bool loginStatus = false;
+        public bool loginStatus = false, isAdminUser = false;
         public string loggedUserName ;
         string fileName = "sessions.bat";
 
@@ -21,6 +21,19 @@ namespace projectPrototypeTwo
         public void userLogUpdate(string value)
         {
             File.WriteAllText(fileName, value);
+        }
+
+        public void isAdminUserCheck()
+        {
+            readLogData();
+            if (loggedUserName == "adminA" || loggedUserName == "adminU" || loggedUserName == "adminR" || loggedUserName == "adminH")
+            {
+                isAdminUser = true;
+            }
+            else
+            {
+                isAdminUser = false;
+            }
         }
 
         public void readLogData()

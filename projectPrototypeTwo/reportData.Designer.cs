@@ -24,7 +24,7 @@ namespace projectPrototypeTwo {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class reportData : global::System.Data.DataSet {
         
-        private ordersDataTable tableorders;
+        private customerDataTable tablecustomer;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace projectPrototypeTwo {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["orders"] != null)) {
-                    base.Tables.Add(new ordersDataTable(ds.Tables["orders"]));
+                if ((ds.Tables["customer"] != null)) {
+                    base.Tables.Add(new customerDataTable(ds.Tables["customer"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace projectPrototypeTwo {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ordersDataTable orders {
+        public customerDataTable customer {
             get {
-                return this.tableorders;
+                return this.tablecustomer;
             }
         }
         
@@ -152,8 +152,8 @@ namespace projectPrototypeTwo {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["orders"] != null)) {
-                    base.Tables.Add(new ordersDataTable(ds.Tables["orders"]));
+                if ((ds.Tables["customer"] != null)) {
+                    base.Tables.Add(new customerDataTable(ds.Tables["customer"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace projectPrototypeTwo {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableorders = ((ordersDataTable)(base.Tables["orders"]));
+            this.tablecustomer = ((customerDataTable)(base.Tables["customer"]));
             if ((initTable == true)) {
-                if ((this.tableorders != null)) {
-                    this.tableorders.InitVars();
+                if ((this.tablecustomer != null)) {
+                    this.tablecustomer.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace projectPrototypeTwo {
             this.Namespace = "http://tempuri.org/reportData.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableorders = new ordersDataTable();
-            base.Tables.Add(this.tableorders);
+            this.tablecustomer = new customerDataTable();
+            base.Tables.Add(this.tablecustomer);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeorders() {
+        private bool ShouldSerializecustomer() {
             return false;
         }
         
@@ -270,29 +270,29 @@ namespace projectPrototypeTwo {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void ordersRowChangeEventHandler(object sender, ordersRowChangeEvent e);
+        public delegate void customerRowChangeEventHandler(object sender, customerRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ordersDataTable : global::System.Data.TypedTableBase<ordersRow> {
+        public partial class customerDataTable : global::System.Data.TypedTableBase<customerRow> {
             
-            private global::System.Data.DataColumn columnOID;
+            private global::System.Data.DataColumn columnNIC;
             
-            private global::System.Data.DataColumn columncusNIC;
+            private global::System.Data.DataColumn columncusName;
             
-            private global::System.Data.DataColumn columnPID;
+            private global::System.Data.DataColumn columncusAddress;
             
-            private global::System.Data.DataColumn columnoDate;
+            private global::System.Data.DataColumn columnemail;
             
-            private global::System.Data.DataColumn columndeliveryAddress;
+            private global::System.Data.DataColumn columntel;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ordersDataTable() {
-                this.TableName = "orders";
+            public customerDataTable() {
+                this.TableName = "customer";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -300,7 +300,7 @@ namespace projectPrototypeTwo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal ordersDataTable(global::System.Data.DataTable table) {
+            internal customerDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -317,48 +317,48 @@ namespace projectPrototypeTwo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected ordersDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected customerDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn OIDColumn {
+            public global::System.Data.DataColumn NICColumn {
                 get {
-                    return this.columnOID;
+                    return this.columnNIC;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn cusNICColumn {
+            public global::System.Data.DataColumn cusNameColumn {
                 get {
-                    return this.columncusNIC;
+                    return this.columncusName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PIDColumn {
+            public global::System.Data.DataColumn cusAddressColumn {
                 get {
-                    return this.columnPID;
+                    return this.columncusAddress;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn oDateColumn {
+            public global::System.Data.DataColumn emailColumn {
                 get {
-                    return this.columnoDate;
+                    return this.columnemail;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn deliveryAddressColumn {
+            public global::System.Data.DataColumn telColumn {
                 get {
-                    return this.columndeliveryAddress;
+                    return this.columntel;
                 }
             }
             
@@ -373,56 +373,56 @@ namespace projectPrototypeTwo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ordersRow this[int index] {
+            public customerRow this[int index] {
                 get {
-                    return ((ordersRow)(this.Rows[index]));
+                    return ((customerRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event ordersRowChangeEventHandler ordersRowChanging;
+            public event customerRowChangeEventHandler customerRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event ordersRowChangeEventHandler ordersRowChanged;
+            public event customerRowChangeEventHandler customerRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event ordersRowChangeEventHandler ordersRowDeleting;
+            public event customerRowChangeEventHandler customerRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event ordersRowChangeEventHandler ordersRowDeleted;
+            public event customerRowChangeEventHandler customerRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddordersRow(ordersRow row) {
+            public void AddcustomerRow(customerRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ordersRow AddordersRow(string cusNIC, int PID, System.DateTime oDate, string deliveryAddress) {
-                ordersRow rowordersRow = ((ordersRow)(this.NewRow()));
+            public customerRow AddcustomerRow(string NIC, string cusName, string cusAddress, string email, string tel) {
+                customerRow rowcustomerRow = ((customerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
-                        cusNIC,
-                        PID,
-                        oDate,
-                        deliveryAddress};
-                rowordersRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowordersRow);
-                return rowordersRow;
+                        NIC,
+                        cusName,
+                        cusAddress,
+                        email,
+                        tel};
+                rowcustomerRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowcustomerRow);
+                return rowcustomerRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ordersRow FindByOID(int OID) {
-                return ((ordersRow)(this.Rows.Find(new object[] {
-                            OID})));
+            public customerRow FindByNIC(string NIC) {
+                return ((customerRow)(this.Rows.Find(new object[] {
+                            NIC})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ordersDataTable cln = ((ordersDataTable)(base.Clone()));
+                customerDataTable cln = ((customerDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -430,68 +430,67 @@ namespace projectPrototypeTwo {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ordersDataTable();
+                return new customerDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnOID = base.Columns["OID"];
-                this.columncusNIC = base.Columns["cusNIC"];
-                this.columnPID = base.Columns["PID"];
-                this.columnoDate = base.Columns["oDate"];
-                this.columndeliveryAddress = base.Columns["deliveryAddress"];
+                this.columnNIC = base.Columns["NIC"];
+                this.columncusName = base.Columns["cusName"];
+                this.columncusAddress = base.Columns["cusAddress"];
+                this.columnemail = base.Columns["email"];
+                this.columntel = base.Columns["tel"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnOID = new global::System.Data.DataColumn("OID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOID);
-                this.columncusNIC = new global::System.Data.DataColumn("cusNIC", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncusNIC);
-                this.columnPID = new global::System.Data.DataColumn("PID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPID);
-                this.columnoDate = new global::System.Data.DataColumn("oDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnoDate);
-                this.columndeliveryAddress = new global::System.Data.DataColumn("deliveryAddress", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndeliveryAddress);
+                this.columnNIC = new global::System.Data.DataColumn("NIC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNIC);
+                this.columncusName = new global::System.Data.DataColumn("cusName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncusName);
+                this.columncusAddress = new global::System.Data.DataColumn("cusAddress", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncusAddress);
+                this.columnemail = new global::System.Data.DataColumn("email", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnemail);
+                this.columntel = new global::System.Data.DataColumn("tel", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntel);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnOID}, true));
-                this.columnOID.AutoIncrement = true;
-                this.columnOID.AutoIncrementSeed = -1;
-                this.columnOID.AutoIncrementStep = -1;
-                this.columnOID.AllowDBNull = false;
-                this.columnOID.ReadOnly = true;
-                this.columnOID.Unique = true;
-                this.columncusNIC.MaxLength = 13;
-                this.columndeliveryAddress.MaxLength = 200;
+                                this.columnNIC}, true));
+                this.columnNIC.AllowDBNull = false;
+                this.columnNIC.Unique = true;
+                this.columnNIC.MaxLength = 13;
+                this.columncusName.MaxLength = 30;
+                this.columncusAddress.MaxLength = 100;
+                this.columnemail.MaxLength = 30;
+                this.columntel.MaxLength = 15;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ordersRow NewordersRow() {
-                return ((ordersRow)(this.NewRow()));
+            public customerRow NewcustomerRow() {
+                return ((customerRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ordersRow(builder);
+                return new customerRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ordersRow);
+                return typeof(customerRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ordersRowChanged != null)) {
-                    this.ordersRowChanged(this, new ordersRowChangeEvent(((ordersRow)(e.Row)), e.Action));
+                if ((this.customerRowChanged != null)) {
+                    this.customerRowChanged(this, new customerRowChangeEvent(((customerRow)(e.Row)), e.Action));
                 }
             }
             
@@ -499,8 +498,8 @@ namespace projectPrototypeTwo {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ordersRowChanging != null)) {
-                    this.ordersRowChanging(this, new ordersRowChangeEvent(((ordersRow)(e.Row)), e.Action));
+                if ((this.customerRowChanging != null)) {
+                    this.customerRowChanging(this, new customerRowChangeEvent(((customerRow)(e.Row)), e.Action));
                 }
             }
             
@@ -508,8 +507,8 @@ namespace projectPrototypeTwo {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ordersRowDeleted != null)) {
-                    this.ordersRowDeleted(this, new ordersRowChangeEvent(((ordersRow)(e.Row)), e.Action));
+                if ((this.customerRowDeleted != null)) {
+                    this.customerRowDeleted(this, new customerRowChangeEvent(((customerRow)(e.Row)), e.Action));
                 }
             }
             
@@ -517,14 +516,14 @@ namespace projectPrototypeTwo {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ordersRowDeleting != null)) {
-                    this.ordersRowDeleting(this, new ordersRowChangeEvent(((ordersRow)(e.Row)), e.Action));
+                if ((this.customerRowDeleting != null)) {
+                    this.customerRowDeleting(this, new customerRowChangeEvent(((customerRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveordersRow(ordersRow row) {
+            public void RemovecustomerRow(customerRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -551,7 +550,7 @@ namespace projectPrototypeTwo {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ordersDataTable";
+                attribute2.FixedValue = "customerDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -595,138 +594,138 @@ namespace projectPrototypeTwo {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ordersRow : global::System.Data.DataRow {
+        public partial class customerRow : global::System.Data.DataRow {
             
-            private ordersDataTable tableorders;
+            private customerDataTable tablecustomer;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal ordersRow(global::System.Data.DataRowBuilder rb) : 
+            internal customerRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableorders = ((ordersDataTable)(this.Table));
+                this.tablecustomer = ((customerDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int OID {
+            public string NIC {
                 get {
-                    return ((int)(this[this.tableorders.OIDColumn]));
+                    return ((string)(this[this.tablecustomer.NICColumn]));
                 }
                 set {
-                    this[this.tableorders.OIDColumn] = value;
+                    this[this.tablecustomer.NICColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string cusNIC {
-                get {
-                    try {
-                        return ((string)(this[this.tableorders.cusNICColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'cusNIC\' in table \'orders\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableorders.cusNICColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int PID {
+            public string cusName {
                 get {
                     try {
-                        return ((int)(this[this.tableorders.PIDColumn]));
+                        return ((string)(this[this.tablecustomer.cusNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PID\' in table \'orders\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'cusName\' in table \'customer\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableorders.PIDColumn] = value;
+                    this[this.tablecustomer.cusNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime oDate {
+            public string cusAddress {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableorders.oDateColumn]));
+                        return ((string)(this[this.tablecustomer.cusAddressColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'oDate\' in table \'orders\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'cusAddress\' in table \'customer\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableorders.oDateColumn] = value;
+                    this[this.tablecustomer.cusAddressColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string deliveryAddress {
+            public string email {
                 get {
                     try {
-                        return ((string)(this[this.tableorders.deliveryAddressColumn]));
+                        return ((string)(this[this.tablecustomer.emailColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'deliveryAddress\' in table \'orders\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'email\' in table \'customer\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableorders.deliveryAddressColumn] = value;
+                    this[this.tablecustomer.emailColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IscusNICNull() {
-                return this.IsNull(this.tableorders.cusNICColumn);
+            public string tel {
+                get {
+                    try {
+                        return ((string)(this[this.tablecustomer.telColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'tel\' in table \'customer\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablecustomer.telColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetcusNICNull() {
-                this[this.tableorders.cusNICColumn] = global::System.Convert.DBNull;
+            public bool IscusNameNull() {
+                return this.IsNull(this.tablecustomer.cusNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPIDNull() {
-                return this.IsNull(this.tableorders.PIDColumn);
+            public void SetcusNameNull() {
+                this[this.tablecustomer.cusNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPIDNull() {
-                this[this.tableorders.PIDColumn] = global::System.Convert.DBNull;
+            public bool IscusAddressNull() {
+                return this.IsNull(this.tablecustomer.cusAddressColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsoDateNull() {
-                return this.IsNull(this.tableorders.oDateColumn);
+            public void SetcusAddressNull() {
+                this[this.tablecustomer.cusAddressColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetoDateNull() {
-                this[this.tableorders.oDateColumn] = global::System.Convert.DBNull;
+            public bool IsemailNull() {
+                return this.IsNull(this.tablecustomer.emailColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsdeliveryAddressNull() {
-                return this.IsNull(this.tableorders.deliveryAddressColumn);
+            public void SetemailNull() {
+                this[this.tablecustomer.emailColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetdeliveryAddressNull() {
-                this[this.tableorders.deliveryAddressColumn] = global::System.Convert.DBNull;
+            public bool IstelNull() {
+                return this.IsNull(this.tablecustomer.telColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SettelNull() {
+                this[this.tablecustomer.telColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -734,22 +733,22 @@ namespace projectPrototypeTwo {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class ordersRowChangeEvent : global::System.EventArgs {
+        public class customerRowChangeEvent : global::System.EventArgs {
             
-            private ordersRow eventRow;
+            private customerRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ordersRowChangeEvent(ordersRow row, global::System.Data.DataRowAction action) {
+            public customerRowChangeEvent(customerRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ordersRow Row {
+            public customerRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -777,7 +776,7 @@ namespace projectPrototypeTwo.reportDataTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ordersTableAdapter : global::System.ComponentModel.Component {
+    public partial class customerTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -791,7 +790,7 @@ namespace projectPrototypeTwo.reportDataTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public ordersTableAdapter() {
+        public customerTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -888,55 +887,56 @@ namespace projectPrototypeTwo.reportDataTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "orders";
-            tableMapping.ColumnMappings.Add("OID", "OID");
-            tableMapping.ColumnMappings.Add("cusNIC", "cusNIC");
-            tableMapping.ColumnMappings.Add("PID", "PID");
-            tableMapping.ColumnMappings.Add("oDate", "oDate");
-            tableMapping.ColumnMappings.Add("deliveryAddress", "deliveryAddress");
+            tableMapping.DataSetTable = "customer";
+            tableMapping.ColumnMappings.Add("NIC", "NIC");
+            tableMapping.ColumnMappings.Add("cusName", "cusName");
+            tableMapping.ColumnMappings.Add("cusAddress", "cusAddress");
+            tableMapping.ColumnMappings.Add("email", "email");
+            tableMapping.ColumnMappings.Add("tel", "tel");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[orders] WHERE (([OID] = @Original_OID) AND ((@IsNull_cusNIC = 1 AND [cusNIC] IS NULL) OR ([cusNIC] = @Original_cusNIC)) AND ((@IsNull_PID = 1 AND [PID] IS NULL) OR ([PID] = @Original_PID)) AND ((@IsNull_oDate = 1 AND [oDate] IS NULL) OR ([oDate] = @Original_oDate)) AND ((@IsNull_deliveryAddress = 1 AND [deliveryAddress] IS NULL) OR ([deliveryAddress] = @Original_deliveryAddress)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[customer] WHERE (([NIC] = @Original_NIC) AND ((@IsNull_cusName = 1 AND [cusName] IS NULL) OR ([cusName] = @Original_cusName)) AND ((@IsNull_cusAddress = 1 AND [cusAddress] IS NULL) OR ([cusAddress] = @Original_cusAddress)) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)) AND ((@IsNull_tel = 1 AND [tel] IS NULL) OR ([tel] = @Original_tel)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cusNIC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cusNIC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cusNIC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cusNIC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_oDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "oDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_oDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "oDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_deliveryAddress", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "deliveryAddress", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_deliveryAddress", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "deliveryAddress", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NIC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NIC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cusName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cusName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cusName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cusName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cusAddress", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cusAddress", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cusAddress", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cusAddress", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_email", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tel", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[orders] ([cusNIC], [PID], [oDate], [deliveryAddress]) VALUES (" +
-                "@cusNIC, @PID, @oDate, @deliveryAddress);\r\nSELECT OID, cusNIC, PID, oDate, deliv" +
-                "eryAddress FROM orders WHERE (OID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[customer] ([NIC], [cusName], [cusAddress], [email], [tel]) VAL" +
+                "UES (@NIC, @cusName, @cusAddress, @email, @tel);\r\nSELECT NIC, cusName, cusAddres" +
+                "s, email, tel FROM customer WHERE (NIC = @NIC)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cusNIC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cusNIC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@oDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "oDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@deliveryAddress", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "deliveryAddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NIC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NIC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cusName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cusName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cusAddress", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cusAddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tel", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[orders] SET [cusNIC] = @cusNIC, [PID] = @PID, [oDate] = @oDate, [deliveryAddress] = @deliveryAddress WHERE (([OID] = @Original_OID) AND ((@IsNull_cusNIC = 1 AND [cusNIC] IS NULL) OR ([cusNIC] = @Original_cusNIC)) AND ((@IsNull_PID = 1 AND [PID] IS NULL) OR ([PID] = @Original_PID)) AND ((@IsNull_oDate = 1 AND [oDate] IS NULL) OR ([oDate] = @Original_oDate)) AND ((@IsNull_deliveryAddress = 1 AND [deliveryAddress] IS NULL) OR ([deliveryAddress] = @Original_deliveryAddress)));
-SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM orders WHERE (OID = @OID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[customer] SET [NIC] = @NIC, [cusName] = @cusName, [cusAddress] = @cusAddress, [email] = @email, [tel] = @tel WHERE (([NIC] = @Original_NIC) AND ((@IsNull_cusName = 1 AND [cusName] IS NULL) OR ([cusName] = @Original_cusName)) AND ((@IsNull_cusAddress = 1 AND [cusAddress] IS NULL) OR ([cusAddress] = @Original_cusAddress)) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)) AND ((@IsNull_tel = 1 AND [tel] IS NULL) OR ([tel] = @Original_tel)));
+SELECT NIC, cusName, cusAddress, email, tel FROM customer WHERE (NIC = @NIC)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cusNIC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cusNIC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@oDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "oDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@deliveryAddress", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "deliveryAddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cusNIC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cusNIC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cusNIC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cusNIC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_oDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "oDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_oDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "oDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_deliveryAddress", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "deliveryAddress", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_deliveryAddress", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "deliveryAddress", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NIC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NIC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cusName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cusName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cusAddress", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cusAddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tel", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NIC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NIC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cusName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cusName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cusName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cusName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cusAddress", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cusAddress", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cusAddress", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cusAddress", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_email", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tel", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -952,7 +952,7 @@ SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM orders WHERE (OID = @OID)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM dbo.orders";
+            this._commandCollection[0].CommandText = "SELECT NIC, cusName, cusAddress, email, tel FROM dbo.customer";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -960,7 +960,7 @@ SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM orders WHERE (OID = @OID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(reportData.ordersDataTable dataTable) {
+        public virtual int Fill(reportData.customerDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -973,9 +973,9 @@ SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM orders WHERE (OID = @OID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual reportData.ordersDataTable GetData() {
+        public virtual reportData.customerDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            reportData.ordersDataTable dataTable = new reportData.ordersDataTable();
+            reportData.customerDataTable dataTable = new reportData.customerDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -983,7 +983,7 @@ SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM orders WHERE (OID = @OID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(reportData.ordersDataTable dataTable) {
+        public virtual int Update(reportData.customerDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -991,7 +991,7 @@ SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM orders WHERE (OID = @OID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(reportData dataSet) {
-            return this.Adapter.Update(dataSet, "orders");
+            return this.Adapter.Update(dataSet, "customer");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1013,39 +1013,44 @@ SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM orders WHERE (OID = @OID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_OID, string Original_cusNIC, global::System.Nullable<int> Original_PID, global::System.Nullable<global::System.DateTime> Original_oDate, string Original_deliveryAddress) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_OID));
-            if ((Original_cusNIC == null)) {
+        public virtual int Delete(string Original_NIC, string Original_cusName, string Original_cusAddress, string Original_email, string Original_tel) {
+            if ((Original_NIC == null)) {
+                throw new global::System.ArgumentNullException("Original_NIC");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_NIC));
+            }
+            if ((Original_cusName == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_cusNIC));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_cusName));
             }
-            if ((Original_PID.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_PID.Value));
-            }
-            else {
+            if ((Original_cusAddress == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Original_oDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_oDate.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_cusAddress));
+            }
+            if ((Original_email == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_deliveryAddress == null)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_email));
+            }
+            if ((Original_tel == null)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_deliveryAddress));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_tel));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1067,30 +1072,36 @@ SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM orders WHERE (OID = @OID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string cusNIC, global::System.Nullable<int> PID, global::System.Nullable<global::System.DateTime> oDate, string deliveryAddress) {
-            if ((cusNIC == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+        public virtual int Insert(string NIC, string cusName, string cusAddress, string email, string tel) {
+            if ((NIC == null)) {
+                throw new global::System.ArgumentNullException("NIC");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(cusNIC));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(NIC));
             }
-            if ((PID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(PID.Value));
-            }
-            else {
+            if ((cusName == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((oDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(oDate.Value));
-            }
             else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(cusName));
+            }
+            if ((cusAddress == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((deliveryAddress == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(cusAddress));
+            }
+            if ((email == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(deliveryAddress));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(email));
+            }
+            if ((tel == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(tel));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1112,65 +1123,75 @@ SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM orders WHERE (OID = @OID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string cusNIC, global::System.Nullable<int> PID, global::System.Nullable<global::System.DateTime> oDate, string deliveryAddress, int Original_OID, string Original_cusNIC, global::System.Nullable<int> Original_PID, global::System.Nullable<global::System.DateTime> Original_oDate, string Original_deliveryAddress, int OID) {
-            if ((cusNIC == null)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+        public virtual int Update(string NIC, string cusName, string cusAddress, string email, string tel, string Original_NIC, string Original_cusName, string Original_cusAddress, string Original_email, string Original_tel) {
+            if ((NIC == null)) {
+                throw new global::System.ArgumentNullException("NIC");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(cusNIC));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(NIC));
             }
-            if ((PID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(PID.Value));
-            }
-            else {
+            if ((cusName == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((oDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(oDate.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(cusName));
+            }
+            if ((cusAddress == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((deliveryAddress == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(cusAddress));
+            }
+            if ((email == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(deliveryAddress));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(email));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_OID));
-            if ((Original_cusNIC == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            if ((tel == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_cusNIC));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(tel));
             }
-            if ((Original_PID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_PID.Value));
+            if ((Original_NIC == null)) {
+                throw new global::System.ArgumentNullException("Original_NIC");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_NIC));
             }
-            if ((Original_oDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Original_oDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((Original_deliveryAddress == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            if ((Original_cusName == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_deliveryAddress));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_cusName));
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(OID));
+            if ((Original_cusAddress == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_cusAddress));
+            }
+            if ((Original_email == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_email));
+            }
+            if ((Original_tel == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_tel));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1191,8 +1212,8 @@ SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM orders WHERE (OID = @OID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string cusNIC, global::System.Nullable<int> PID, global::System.Nullable<global::System.DateTime> oDate, string deliveryAddress, int Original_OID, string Original_cusNIC, global::System.Nullable<int> Original_PID, global::System.Nullable<global::System.DateTime> Original_oDate, string Original_deliveryAddress) {
-            return this.Update(cusNIC, PID, oDate, deliveryAddress, Original_OID, Original_cusNIC, Original_PID, Original_oDate, Original_deliveryAddress, Original_OID);
+        public virtual int Update(string cusName, string cusAddress, string email, string tel, string Original_NIC, string Original_cusName, string Original_cusAddress, string Original_email, string Original_tel) {
+            return this.Update(Original_NIC, cusName, cusAddress, email, tel, Original_NIC, Original_cusName, Original_cusAddress, Original_email, Original_tel);
         }
     }
     
@@ -1208,7 +1229,7 @@ SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM orders WHERE (OID = @OID)";
         
         private UpdateOrderOption _updateOrder;
         
-        private ordersTableAdapter _ordersTableAdapter;
+        private customerTableAdapter _customerTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1230,12 +1251,12 @@ SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM orders WHERE (OID = @OID)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public ordersTableAdapter ordersTableAdapter {
+        public customerTableAdapter customerTableAdapter {
             get {
-                return this._ordersTableAdapter;
+                return this._customerTableAdapter;
             }
             set {
-                this._ordersTableAdapter = value;
+                this._customerTableAdapter = value;
             }
         }
         
@@ -1258,9 +1279,9 @@ SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM orders WHERE (OID = @OID)";
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._ordersTableAdapter != null) 
-                            && (this._ordersTableAdapter.Connection != null))) {
-                    return this._ordersTableAdapter.Connection;
+                if (((this._customerTableAdapter != null) 
+                            && (this._customerTableAdapter.Connection != null))) {
+                    return this._customerTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1275,7 +1296,7 @@ SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM orders WHERE (OID = @OID)";
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._ordersTableAdapter != null)) {
+                if ((this._customerTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1289,12 +1310,12 @@ SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM orders WHERE (OID = @OID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(reportData dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._ordersTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.orders.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._customerTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.customer.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._ordersTableAdapter.Update(updatedRows));
+                    result = (result + this._customerTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1308,11 +1329,11 @@ SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM orders WHERE (OID = @OID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(reportData dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._ordersTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.orders.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._customerTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.customer.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._ordersTableAdapter.Update(addedRows));
+                    result = (result + this._customerTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1326,11 +1347,11 @@ SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM orders WHERE (OID = @OID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(reportData dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._ordersTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.orders.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._customerTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.customer.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._ordersTableAdapter.Update(deletedRows));
+                    result = (result + this._customerTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1373,8 +1394,8 @@ SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM orders WHERE (OID = @OID)";
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._ordersTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._ordersTableAdapter.Connection) == false))) {
+            if (((this._customerTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._customerTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1410,13 +1431,13 @@ SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM orders WHERE (OID = @OID)";
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._ordersTableAdapter != null)) {
-                    revertConnections.Add(this._ordersTableAdapter, this._ordersTableAdapter.Connection);
-                    this._ordersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._ordersTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._ordersTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._ordersTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._ordersTableAdapter.Adapter);
+                if ((this._customerTableAdapter != null)) {
+                    revertConnections.Add(this._customerTableAdapter, this._customerTableAdapter.Connection);
+                    this._customerTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._customerTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._customerTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._customerTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._customerTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1477,9 +1498,9 @@ SELECT OID, cusNIC, PID, oDate, deliveryAddress FROM orders WHERE (OID = @OID)";
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._ordersTableAdapter != null)) {
-                    this._ordersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._ordersTableAdapter]));
-                    this._ordersTableAdapter.Transaction = null;
+                if ((this._customerTableAdapter != null)) {
+                    this._customerTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._customerTableAdapter]));
+                    this._customerTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace projectPrototypeTwo {
+namespace MegaTech {
     
     
     /// <summary>
@@ -764,7 +764,7 @@ namespace projectPrototypeTwo {
         }
     }
 }
-namespace projectPrototypeTwo.reportDataTableAdapters {
+namespace MegaTech.reportDataTableAdapters {
     
     
     /// <summary>
@@ -943,7 +943,7 @@ SELECT NIC, cusName, cusAddress, email, tel FROM customer WHERE (NIC = @NIC)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::projectPrototypeTwo.Properties.Settings.Default.MegaTechV2ConnectionString;
+            this._connection.ConnectionString = global::MegaTech.Properties.Settings.Default.MegaTechV2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

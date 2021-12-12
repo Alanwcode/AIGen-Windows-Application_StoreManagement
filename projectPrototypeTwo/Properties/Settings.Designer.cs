@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace projectPrototypeTwo.Properties {
+namespace MegaTech.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

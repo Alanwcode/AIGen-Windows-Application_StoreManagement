@@ -66,8 +66,11 @@ namespace projectPrototypeTwo
                         logs.userLogUpdate(txt_username.Text);
                         lg.saveUsername(txt_username.Text);
                         lg.updateLoginStatus(true);
-                        Sucess su = new Sucess();
-                        su.ShowDialog();
+                        this.Close();
+                        mainMenu mm = new mainMenu();
+                        mm.Show();
+                        //Sucess su = new Sucess();
+                        //su.ShowDialog();
                     }
                     else
                     {

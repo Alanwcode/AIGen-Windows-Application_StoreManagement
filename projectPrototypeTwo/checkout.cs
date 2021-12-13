@@ -188,8 +188,8 @@ namespace projectPrototypeTwo
             lbl_formValidation.Visible = false;
             if (logs.loginStatus == false)
             {
-                login log = new login();
-                log.ShowDialog();
+                MessageBox.Show("You are not Looggedin Please Login before Purchase.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                this.Close();
             }
         }
     }

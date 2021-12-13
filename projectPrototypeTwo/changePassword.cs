@@ -19,7 +19,6 @@ namespace projectPrototypeTwo
         {
             NIC = nic;
             InitializeComponent();
-            InitializeComponent();
             txt_password.PasswordChar = '*';
             txt_password.MaxLength = 10;
             txt_confirmPassword.PasswordChar = '*';
